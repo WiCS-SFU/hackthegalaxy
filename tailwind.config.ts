@@ -19,7 +19,19 @@ const config: Config = {
         '2xl': '24px',
         '3xl': '32px',
       },
-      // foundation colousr as described in the Design System
+      // radius values as described in the Design System
+      // use with the Tailwind rounded utility (e.g. rounded-xs)
+      borderRadius: {
+        'none': '0px',
+        'xs': '2px',
+        'sm': '4px',
+        'md': '6px',
+        'lg': '8px',
+        'xl': '12px',
+        '2xl': '16px',
+        '3xl': '24px',
+      },
+      // foundation colours as described in the Design System
       colors: {
         pink: {
             100: '#F7F0FB',
