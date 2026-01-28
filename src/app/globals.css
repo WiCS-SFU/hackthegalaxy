@@ -19,6 +19,115 @@
   }
 }
 
+@layer components {
+    /* display */
+  .text-display-lg {
+    font-family: "Spline Sans", sans-serif;
+    font-size: 64px;
+    line-height: 120%;
+    font-weight: 700; 
+  }
+  .text-display-md {
+    font-family: "Spline Sans", sans-serif;
+    font-size: 48px;
+    line-height: 120%;
+    font-weight: 700;
+  }
+  .text-display-sm {
+    font-family: "Spline Sans", sans-serif;
+    font-size: 32px;
+    line-height: 120%;
+    font-weight: 700;
+  }
+
+  /* heading */
+  .text-heading-lg {
+    font-family: "Spline Sans", sans-serif;
+    font-size: 32px;
+    line-height: 120%;
+    font-weight: 600;
+  }
+  .text-heading-md {
+    font-family: "Spline Sans", sans-serif;
+    font-size: 24px;
+    line-height: 120%;
+    font-weight: 600;
+  }
+  .text-heading-sm {
+    font-family: "Spline Sans", sans-serif;
+    font-size: 20px;
+    line-height: 120%;
+    font-weight: 600;
+  }
+  .text-heading-xs {
+    font-family: "Spline Sans", sans-serif;
+    font-size: 16px;
+    line-height: 120%;
+    font-weight: 600;
+  }
+
+  /* body */
+  .text-body-lg {
+    font-family: "Spline Sans", sans-serif;
+    font-size: 20px;
+    line-height: 140%;
+    font-weight: 400;
+  }
+  .text-body-md {
+    font-family: "Spline Sans", sans-serif;
+    font-size: 16px;
+    line-height: 140%;
+    font-weight: 400;
+  }
+  .text-body-sm {
+    font-family: "Spline Sans", sans-serif;
+    font-size: 14px;
+    line-height: 140%;
+    font-weight: 400;
+  }
+  .text-body-lg-bold {
+    font-family: "Spline Sans", sans-serif;
+    font-size: 20px;
+    line-height: 140%;
+    font-weight: 700;
+  }
+  .text-body-md-bold {
+    font-family: "Spline Sans", sans-serif;
+    font-size: 16px;
+    line-height: 140%;
+    font-weight: 700;
+  }
+  .text-body-sm-bold {
+    font-family: "Spline Sans", sans-serif;
+    font-size: 14px;
+    line-height: 140%;
+    font-weight: 700;
+  }
+
+  /* accent */
+  .text-accent-md {
+    font-family: "Ozanium", sans-serif;
+    font-size: 16px;
+    line-height: 120%;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .text-accent-sm {
+    font-family: "Ozanium", sans-serif;
+    font-size: 14px;
+    line-height: 120%;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .text-accent-xs {
+    font-family: "Ozanium", sans-serif;
+    font-size: 12px;
+    line-height: 120%;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}
+
 body {
   background: var(--background);
   color: var(--foreground);

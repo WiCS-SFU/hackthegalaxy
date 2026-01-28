@@ -110,7 +110,29 @@ const config: Config = {
             800: '#5E1616',
             900: '#3A0707',
         },
-      }
+      },
+      fontFamily: {
+        sans: ['"Spline Sans"', "sans-serif"],
+        accent: ["Ozanium", "sans-serif"],
+      },
+      fontSize: {
+        "display-lg": ["64px", { lineHeight: "120%", fontWeight: "700" }],
+        "display-md": ["48px", { lineHeight: "120%", fontWeight: "700" }],
+        "display-sm": ["32px", { lineHeight: "120%", fontWeight: "700" }],
+
+        "heading-lg": ["32px", { lineHeight: "120%", fontWeight: "600" }],
+        "heading-md": ["24px", { lineHeight: "120%", fontWeight: "600" }],
+        "heading-sm": ["20px", { lineHeight: "120%", fontWeight: "600" }],
+        "heading-xs": ["16px", { lineHeight: "120%", fontWeight: "600" }],
+
+        "body-lg": ["20px", { lineHeight: "140%", fontWeight: "400" }],
+        "body-md": ["16px", { lineHeight: "140%", fontWeight: "400" }],
+        "body-sm": ["14px", { lineHeight: "140%", fontWeight: "400" }],
+
+        "accent-md": ["16px", { lineHeight: "120%", fontWeight: "700" }],
+        "accent-sm": ["14px", { lineHeight: "120%", fontWeight: "700" }],
+        "accent-xs": ["12px", { lineHeight: "120%", fontWeight: "700" }],
+      },
     },
   },
   plugins: [],
