@@ -2,8 +2,8 @@ import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
-    // need to add src/pages/ and src/components/
     "./src/app/**/*.{ts,tsx,js,jsx,mdx}",
+    "./src/components/**/*.{ts,tsx,js,jsx,mdx}",
     "./public/**/*.html"
   ],
   theme: {
