@@ -1,3 +1,5 @@
+import ChevronDown from "./ChevronDown"; // import chevron icon
+
 interface FAQItemProps {
   question: string; // faq question 
   answer: string; // faq answer 
@@ -11,6 +13,8 @@ export default function FAQItem({ question, answer, isOpen, onToggle }: FAQItemP
       <button onClick={onToggle} aria-expanded={isOpen} className="flex w-full justify-between text-left">
         {/* Question text */}
         <span className="text-body-lg text-white">{question}</span> 
+        {/* Chevron icon */}
+        <ChevronDown open={isOpen} />
       </button>
 
       <div className={`grid transition-all duration-300 ease-in-out ${isOpen ? "grid-rows-[1fr] opacity-100 mt-3" : "grid-rows-[0fr] opacity-0"}`}>
