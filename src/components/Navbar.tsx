@@ -150,7 +150,7 @@ export default function Navbar() {
 
             {/* Mobile Footer */}
             <div className="w-full flex flex-col items-center gap-6">
-              <div className="w-full flex justify-center items-center gap-6 text-body-bold uppercase text-pink-300">
+              <div className="w-full flex justify-center items-center gap-6 text-body-sm-bold uppercase text-pink-300">
                 <a href="mailto:wics@sfu.ca">EMAIL</a>
                 <a href="https://www.instagram.com/sfuwics/" target="_blank" rel="noopener noreferrer">
                   INSTAGRAM
