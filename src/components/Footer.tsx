@@ -47,7 +47,7 @@ export default function Footer() {
 
             <Link
               href="#apply"
-              className="inline-flex items-center justify-center px-4 py-2 rounded-md border border-pink-100 text-heading-xs text-neutral-100 transition-colors hover:bg-purple-700 hover:border-purple-700"
+              className="inline-flex items-center justify-center px-4 py-2 rounded-md border border-pink-100 text-accent-lg text-neutral-100 transition-colors hover:bg-purple-700 hover:border-purple-700"
             >
               APPLY NOW
             </Link>
@@ -119,7 +119,7 @@ export default function Footer() {
 
               <Link
                 href="#apply"
-                className="inline-flex items-center justify-center px-2 py-2 rounded-md border border-pink-100 text-accent-xs text-neutral-100 transition-colors hover:bg-purple-700 hover:border-purple-700"
+                className="inline-flex items-center justify-center px-4 py-2rounded-md border border-pink-100 text-accent-lg text-neutral-100 transition-colors hover:bg-purple-700 hover:border-purple-700"
               >
                 APPLY NOW
               </Link>
