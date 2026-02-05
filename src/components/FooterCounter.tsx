@@ -42,7 +42,7 @@ function TimeBlock({ value, label }: { value: string; label: string }) {
 
 export default function ApplyCountdown() {
   // Change this to your real deadline (local time)
-  const deadline = useMemo(() => new Date("2026-03-01T23:59:00"), []);
+  const deadline = useMemo(() => new Date("2026-02-01T23:59:00"), []);
 
   const [left, setLeft] = useState<TimeLeft>(() => calcTimeLeft(deadline));
 
@@ -63,12 +63,20 @@ export default function ApplyCountdown() {
         </div>
 
         <p className="text-center text-body-lg text-neutral-100">
-          <span className="block md:inline">
-            Applications are open, <strong>apply now!</strong>
-          </span>
-          <span className="block md:inline">
-            {" "}Applications close in:
-          </span>
+          {isClosed ? (
+            <>
+              Applications are now <strong>closed </strong> for Hack the Galaxy 2026.
+            </>
+          ) : (
+            <>
+              <span className="block md:inline">
+                Applications are open, <strong>apply now!</strong>
+              </span>
+              <span className="block md:inline">
+                {" "}Applications close in:
+              </span>
+            </>
+          )}
         </p>
 
         <div className="flex justify-center items-start gap-4">
@@ -82,7 +90,7 @@ export default function ApplyCountdown() {
           aria-disabled={isClosed}
           className={`inline-flex items-center justify-center rounded-md border px-4 py-2 text-accent-md transition-colors ${
             isClosed
-              ? "border-neutral-400 text-pink-100 cursor-not-allowed pointer-events-none"
+              ? "border-purple-300 text-purple-300 cursor-not-allowed pointer-events-none"
               : "border-pink-100 text-pink-100 hover:bg-purple-700 hover:border-purple-700"
           }`}
         >

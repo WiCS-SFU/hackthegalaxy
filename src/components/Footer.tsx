@@ -1,8 +1,26 @@
+"use client"
+
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import fullLogo from "@/assets/images/shared/full_logo.svg";
 
 export default function Footer() {
+  const [open, setOpen] = useState(false);
+
+  const handleAnchorClick =
+    (href: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
+      if (!href.startsWith("#")) return;
+
+      e.preventDefault();
+
+      const el = document.querySelector(href);
+      if (!el) return;
+
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+      setOpen(false);
+    };
+
   return (
     <footer className="w-full flex flex-col items-center py-8 gap-2.5 bg-purple-600 text-neutral-100">
       {/* DESKTOP */}
@@ -10,7 +28,7 @@ export default function Footer() {
         <div className="mx-auto w-full max-w-7xl flex items-center justify-between px-8 py-8">
           {/* Logo */}
           <div className="flex items-center justify-center shrink-0 w-[276px] h-[100px]">
-            <a href="#hero" aria-label="Back to top">
+            <a href="#hero" aria-label="Back to top" onClick={handleAnchorClick("#hero")}>
               <Image
                 src={fullLogo}
                 alt="Hack the Galaxy full logo"
@@ -22,7 +40,7 @@ export default function Footer() {
           </div>
 
           {/* Tagline + Button */}
-          <div className="flex flex-col items-start gap-2 flex-1 ml-16 justify-center">
+          <div className="flex flex-col items-start gap-2 flex-1 ml-8 justify-center">
             <div className="text-display-sm text-neutral-100 text-body-lg-bold">
               Where creativity takes orbit.
             </div>
@@ -36,7 +54,7 @@ export default function Footer() {
           </div>
 
           {/* Links + Copyright */}
-          <div className="flex flex-col">
+          <div className="flex flex-col pt-10">
             <div className="w-full flex justify-center items-center gap-2 text-body-sm-bold uppercase text-pink-300">
               <a
                 href="mailto:wics@sfu.ca"
@@ -82,7 +100,7 @@ export default function Footer() {
         <div className="mx-auto w-full px-4 py-8 flex flex-col gap-4 sm:max-w-[393px]">
           <div className="flex items-start justify-between gap-2">
             <div className="shrink-0 w-[193px] max-w-[45vw]">
-              <a href="#hero" aria-label="Back to top">
+              <a href="#hero" aria-label="Back to top" onClick={handleAnchorClick("#hero")}>
                 <Image
                   src={fullLogo}
                   alt="Hack the Galaxy full logo"
