@@ -184,22 +184,30 @@
   }
 
   /* accent */
+  .text-accent-lg {
+    font-family: "Oxanium", sans-serif;
+    font-size: 20px;
+    line-height: 120%;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
   .text-accent-md {
-    font-family: "Ozanium", sans-serif;
+    font-family: "Oxanium", sans-serif;
     font-size: 16px;
     line-height: 120%;
     font-weight: 700;
     text-transform: uppercase;
   }
   .text-accent-sm {
-    font-family: "Ozanium", sans-serif;
+    font-family: "Oxanium", sans-serif;
     font-size: 14px;
     line-height: 120%;
     font-weight: 700;
     text-transform: uppercase;
   }
   .text-accent-xs {
-    font-family: "Ozanium", sans-serif;
+    font-family: "Oxanium", sans-serif;
     font-size: 12px;
     line-height: 120%;
     font-weight: 700;

@@ -47,7 +47,7 @@ export default function Footer() {
 
             <Link
               href="#apply"
-              className="inline-flex items-center justify-center px-4 py-2 rounded-md border border-pink-100 text-accent-lg text-neutral-100 transition-colors hover:bg-purple-700 hover:border-purple-700"
+              className="inline-flex items-center justify-center px-4 py-2 rounded-md border border-pink-100 text-heading-xs text-neutral-100 transition-colors hover:bg-purple-700 hover:border-purple-700"
             >
               APPLY NOW
             </Link>
@@ -98,7 +98,7 @@ export default function Footer() {
       {/* MOBILE */}
       <div className="md:hidden w-full">
         <div className="mx-auto w-full px-4 py-8 flex flex-col gap-4 sm:max-w-[393px]">
-          <div className="flex items-start justify-between gap-2">
+          <div className="flex items-start justify-between gap-4">
             <div className="shrink-0 w-[193px] max-w-[45vw]">
               <a href="#hero" aria-label="Back to top" onClick={handleAnchorClick("#hero")}>
                 <Image
@@ -119,7 +119,7 @@ export default function Footer() {
 
               <Link
                 href="#apply"
-                className="inline-flex items-center justify-center px-4 py-2rounded-md border border-pink-100 text-accent-lg text-neutral-100 transition-colors hover:bg-purple-700 hover:border-purple-700"
+                className="inline-flex items-center justify-center px-1.5 py-1.5 rounded-md border border-pink-100 text-accent-xs text-neutral-100 transition-colors hover:bg-purple-700 hover:border-purple-700"
               >
                 APPLY NOW
               </Link>
