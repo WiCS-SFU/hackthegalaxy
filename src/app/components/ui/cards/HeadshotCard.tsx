@@ -5,8 +5,8 @@ export enum Role {
   A = "Co-Chair",
   B = "Finance & Sponsorship",
   C = "Operations & Logistics",
-  D = "Visual Design & Marketing",
-  E = "Recruitment",
+  D = "Recruitment",
+  E = "Visual Design & Marketing",
 }
 
 interface HeadshotCardProps {
@@ -24,7 +24,7 @@ function HeadshotCard({ role, name, bio }: HeadshotCardProps) {
       <svg
         width="100%"
         height="auto"
-        viewBox="0 0 361 388"
+        viewBox="0 0 361 400"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         className="block w-full"
@@ -53,15 +53,15 @@ function HeadshotCard({ role, name, bio }: HeadshotCardProps) {
             preserveAspectRatio="xMidYMid slice"
           />
         </g>
-        <foreignObject x="64%" y="88%" width="36%" height="14%">
+        <foreignObject x="62.5%" y="85%" width="135" height="50">
           <div className="h-full w-full">
             <div
               className={clsx(styleBase, {
                 "bg-pink-200 text-accent-md": role === Role.A,
                 "bg-system-green-200 text-accent-sm": role === Role.B,
                 "bg-cyan-400 text-accent-sm": role === Role.C,
-                "bg-system-yellow-200 text-accent-sm": role === Role.D,
-                "bg-purple-200 text-accent-sm": role === Role.E,
+                "bg-purple-200 text-accent-sm": role === Role.D,
+                "bg-system-yellow-200 text-accent-sm": role === Role.E,
               })}
             >
               {role}
@@ -69,8 +69,10 @@ function HeadshotCard({ role, name, bio }: HeadshotCardProps) {
           </div>
         </foreignObject>
       </svg>
-      <div className="text-heading-lg mt-xl mb-[10px]">{name}</div>
-      <div className="mb-xl">{bio}</div>
+      <div className="text-heading-lg text-neutral-100 mt-xl mb-[10px]">
+        {name}
+      </div>
+      <div className="text-body-sm text-neutral-100 mb-xl">{bio}</div>
     </div>
   );
 }
