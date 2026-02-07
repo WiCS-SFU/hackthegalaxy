@@ -127,7 +127,7 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-col pt-8">
-            <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-2 text-body-sm-bold uppercase text-pink-300">
+            <div className="flex flex-wrap justify-center items-center gap-x-xl gap-y-2 text-body-sm-bold uppercase text-pink-300">
               <a
                 href="mailto:wics@sfu.ca"
                 className="hover:opacity-80 transition-opacity"
