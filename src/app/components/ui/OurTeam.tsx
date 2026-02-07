@@ -15,7 +15,7 @@ export default function OurTeam() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2xl mb-2xl">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-2xl mb-2xl">
         <HeadshotCard
           role="Co-Chair"
           name="Jennifer Huang"
@@ -28,7 +28,7 @@ export default function OurTeam() {
         ></HeadshotCard>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-2xl mb-2xl">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-2xl mb-2xl">
         <HeadshotCard
           role="Finance & Sponsorship"
           name="Mara"
@@ -46,7 +46,7 @@ export default function OurTeam() {
         ></HeadshotCard>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-2xl mb-2xl">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-2xl mb-2xl">
         <HeadshotCard
           role="Operations & Logistics"
           name="Serena"
@@ -64,7 +64,7 @@ export default function OurTeam() {
         ></HeadshotCard>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-2xl mb-2xl">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-2xl mb-2xl">
         <HeadshotCard
           role="Recruitment"
           name="Felicia"
@@ -82,7 +82,7 @@ export default function OurTeam() {
         ></HeadshotCard>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-2xl mb-2xl">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-2xl mb-2xl">
         <HeadshotCard
           role="Visual Design & Marketing"
           name="Bianca"
