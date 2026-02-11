@@ -14,7 +14,7 @@ export default function FAQItem({
   onToggle,
 }: FAQItemProps) {
   return (
-    <div className="border-b border-white pb-lg">
+    <div className="border-b border-white py-xl">
       <button
         onClick={onToggle}
         aria-expanded={isOpen}
