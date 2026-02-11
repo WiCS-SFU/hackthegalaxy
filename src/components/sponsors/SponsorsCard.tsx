@@ -2,6 +2,8 @@ import Image from "next/image";
 
 type Tier = "gold" | "silver" | "bronze";
 
+// SponsorsCard component with dynamic styling based on tier
+
 const tierConfig: Record<Tier, { containerClass: string; imageWidth: number; imageHeight: number }> = {
   gold: {
     containerClass: "bg-purple-600 p-xl h-[150px]",
@@ -19,6 +21,8 @@ const tierConfig: Record<Tier, { containerClass: string; imageWidth: number; ima
     imageHeight: 56.2,
   },
 };
+
+// Added logo of sponsorships to the card
 
 export default function SponsorCard({ tier }: { tier: Tier }) {
   const config = tierConfig[tier];

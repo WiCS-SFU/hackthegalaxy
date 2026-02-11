@@ -3,7 +3,6 @@ import SponsorCard from "./SponsorsCard";
 export default function Sponsors() {
   return (
     <section className="w-full bg-neutral-800 px-xl flex flex-col">
-      {/* Text block */}
       <div className="w-full">
         <p className="text-accent-sm mb-2 text-cyan-400 font">
           Our Partners
