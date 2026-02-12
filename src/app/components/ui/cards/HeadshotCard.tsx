@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import { StaticImageData } from "next/image";
 import CosmosHeadshot from "@/app/assets/Cosmos_Headshot.png";
 
 export enum Role {
@@ -13,9 +14,10 @@ interface HeadshotCardProps {
   role: string;
   name: string;
   bio: string;
+  image: string;
 }
 
-function HeadshotCard({ role, name, bio }: HeadshotCardProps) {
+function HeadshotCard({ role, name, bio, image }: HeadshotCardProps) {
   const styleBase =
     "inline-flex h-full w-full items-center justify-center rounded-3xl pt-lg pb-lg pl-xl pr-xl text-neutral-800";
 
@@ -47,7 +49,7 @@ function HeadshotCard({ role, name, bio }: HeadshotCardProps) {
         <g mask="url(#headshot-mask)">
           <rect width="361" height="388" fill="#CAC9D8" />
           <image
-            href={CosmosHeadshot.src}
+            href={image}
             width="361"
             height="387.369"
             preserveAspectRatio="xMidYMid slice"
