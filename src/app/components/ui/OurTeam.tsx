@@ -2,7 +2,6 @@ import Head from "next/head";
 import HeadshotCard from "./cards/HeadshotCard";
 import CosmosHeadshot from "@/app/assets/Cosmos_Headshot.png";
 
-//CosmosHeadshot.src
 export default function OurTeam() {
   return (
     <div className="mt-3xl mr-xl mb-3xl ml-xl">
