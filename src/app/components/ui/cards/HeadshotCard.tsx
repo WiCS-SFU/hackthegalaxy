@@ -1,6 +1,4 @@
 import clsx from "clsx";
-import { StaticImageData } from "next/image";
-import CosmosHeadshot from "@/app/assets/Cosmos_Headshot.png";
 
 export enum Role {
   A = "Co-Chair",
@@ -19,62 +17,103 @@ interface HeadshotCardProps {
 
 function HeadshotCard({ role, name, bio, image }: HeadshotCardProps) {
   const styleBase =
-    "inline-flex h-full w-full items-center justify-center rounded-3xl pt-lg pb-lg pl-xl pr-xl text-neutral-800";
+    "inline-flex items-center justify-center rounded-3xl px-xl py-lg text-left text-neutral-800";
+  const maskId = `headshot-mask-${name.replace(/\s+/g, "")}`;
+  const isCoChair = role === Role.A;
+
+  const renderSvg = (
+    viewBox: string,
+    maskPath: string,
+    imageWidth: number,
+    imageHeight: number,
+    roleBox: { x: number; y: number; width: number; height: number },
+    maskSuffix: string,
+    className?: string,
+  ) => (
+    <svg
+      viewBox={viewBox}
+      className={clsx("block w-full h-auto", className)}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <defs>
+        <mask id={`${maskId}-${maskSuffix}`}>
+          <path d={maskPath} fill="#EFD8FF" />
+        </mask>
+      </defs>
+      <g mask={`url(#${maskId}-${maskSuffix})`}>
+        <rect width={imageWidth} height={imageHeight} fill="#CAC9D8" />
+        <image
+          href={image}
+          width={imageWidth}
+          height={imageHeight}
+          preserveAspectRatio="xMidYMid slice"
+        />
+      </g>
+      <foreignObject
+        x={roleBox.x}
+        y={roleBox.y}
+        width={roleBox.width}
+        height={roleBox.height}
+      >
+        <div className="flex h-full w-full items-center justify-center">
+          <div
+            className={clsx(styleBase, {
+              "bg-pink-200 text-accent-lg": role === Role.A,
+              "bg-system-green-200 text-accent-sm": role === Role.B,
+              "bg-cyan-400 text-accent-sm": role === Role.C,
+              "bg-purple-200 text-accent-sm": role === Role.D,
+              "bg-system-yellow-200 text-accent-sm": role === Role.E,
+            })}
+          >
+            {role}
+          </div>
+        </div>
+      </foreignObject>
+    </svg>
+  );
 
   return (
-    <div className="flex flex-col">
-      <svg
-        width="100%"
-        height="auto"
-        viewBox="0 0 361 400"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        className="block w-full"
-        preserveAspectRatio="xMidYMid slice"
-      >
-        <mask
-          id="headshot-mask"
-          style={{ maskType: "alpha" }}
-          maskUnits="userSpaceOnUse"
-          x="0"
-          y="0"
-          width="361"
-          height="388"
-        >
-          <path
-            d="M361 311.369C361 324.624 350.255 335.369 337 335.369H247C233.745 335.369 223 346.114 223 359.369V363.369C223 376.624 212.255 387.369 199 387.369H24C10.7452 387.369 0 376.624 0 363.369V24C0 10.7452 10.7452 0 24 0H337C350.255 0 361 10.7452 361 24V311.369Z"
-            fill="#EFD8FF"
-          />
-        </mask>
-        <g mask="url(#headshot-mask)">
-          <rect width="361" height="388" fill="#CAC9D8" />
-          <image
-            href={image}
-            width="361"
-            height="387.369"
-            preserveAspectRatio="xMidYMid slice"
-          />
-        </g>
-        <foreignObject x="62.5%" y="85%" width="135" height="50">
-          <div className="h-full w-full">
-            <div
-              className={clsx(styleBase, {
-                "bg-pink-200 text-accent-md": role === Role.A,
-                "bg-system-green-200 text-accent-sm": role === Role.B,
-                "bg-cyan-400 text-accent-sm": role === Role.C,
-                "bg-purple-200 text-accent-sm": role === Role.D,
-                "bg-system-yellow-200 text-accent-sm": role === Role.E,
-              })}
-            >
-              {role}
-            </div>
-          </div>
-        </foreignObject>
-      </svg>
-      <div className="text-heading-lg text-neutral-100 mt-xl mb-[10px]">
-        {name}
+    <div className="w-full">
+      {/** Headshot Card Shape */}
+      {isCoChair ? (
+        <>
+          {renderSvg(
+            "0 0 361 388",
+            "M361 301.369C361 314.624 350.255 325.369 337 325.369H237.515C224.26 325.369 213.515 336.114 213.515 349.369V363.369C213.515 376.624 202.769 387.369 189.515 387.369H24C10.7452 387.369 0 376.624 0 363.369V24C0 10.7452 10.7452 0 24 0H337C350.255 0 361 10.7452 361 24V301.369Z",
+            361,
+            388,
+            { x: 224, y: 317, width: 135, height: 90 },
+            "mobile",
+            "md:hidden",
+          )}
+          {renderSvg(
+            "0 0 572 388",
+            "M572 311.369C572 324.624 561.255 335.369 548 335.369H458C444.745 335.369 434 346.114 434 359.369V363.369C434 376.624 423.255 387.369 410 387.369H24C10.7452 387.369 0 376.624 0 363.369V24C0 10.7452 10.7452 0 24 0H548C561.255 0 572 10.7452 572 24V311.369Z",
+            572,
+            387.369,
+            { x: 409, y: 319, width: 200, height: 90 },
+            "desktop",
+            "hidden md:block",
+          )}
+        </>
+      ) : (
+        renderSvg(
+          "0 0 361 388",
+          "M361 301.369C361 314.624 350.255 325.369 337 325.369H237.515C224.26 325.369 213.515 336.114 213.515 349.369V363.369C213.515 376.624 202.769 387.369 189.515 387.369H24C10.7452 387.369 0 376.624 0 363.369V24C0 10.7452 10.7452 0 24 0H337C350.255 0 361 10.7452 361 24V301.369Z",
+          361,
+          388,
+          { x: 224, y: 317, width: 135, height: 90 },
+          "default",
+        )
+      )}
+
+      {/** Name and Bio */}
+      <div>
+        <div className="text-heading-lg text-neutral-100 mt-xl mb-2.5">
+          {name}
+        </div>
+        <div className="text-body-sm text-neutral-100 mb-xl">{bio}</div>
       </div>
-      <div className="text-body-sm text-neutral-100 mb-xl">{bio}</div>
     </div>
   );
 }
