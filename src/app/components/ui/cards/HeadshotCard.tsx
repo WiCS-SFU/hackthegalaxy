@@ -22,7 +22,7 @@ function HeadshotCard({ role, name, bio, image }: HeadshotCardProps) {
     "inline-flex h-full w-full items-center justify-center rounded-3xl pt-lg pb-lg pl-xl pr-xl text-neutral-800";
 
   return (
-    <div className="flex w-full max-w-[420px] flex-col">
+    <div className="flex flex-col">
       <svg
         width="100%"
         height="auto"
