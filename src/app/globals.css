@@ -184,6 +184,14 @@
   }
 
   /* accent */
+  .text-accent-lg {
+    font-family: "Oxanium", sans-serif;
+    font-size: 20px;
+    line-height: 120%;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
   .text-accent-md {
     font-family: "Oxanium", sans-serif;
     font-size: 16px;
