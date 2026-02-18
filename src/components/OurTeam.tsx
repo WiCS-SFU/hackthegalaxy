@@ -1,5 +1,5 @@
 import Head from "next/head";
-import HeadshotCard from "./cards/HeadshotCard";
+import HeadshotCard from "./ui/cards/HeadshotCard";
 import CosmosHeadshot from "@/app/assets/Cosmos_Headshot.png";
 
 export default function OurTeam() {
