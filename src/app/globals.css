@@ -213,6 +213,16 @@
     font-weight: 700;
     text-transform: uppercase;
   }
+
+  /*mascot font*/
+  .text-jocky-normal {
+    color: #f6c7c7;
+    font-family: "Jocky Starline";
+    font-size: 125.22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 175.308px */
+  }
 }
 
 body {
