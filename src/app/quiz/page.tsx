@@ -40,7 +40,7 @@ export default function QuizPage() {
                     </div>
 
                     <div className="z-10 mt-8 mb-3">
-                            <Button onClick={() => router.push("/quiz")} variant="default" size="large" iconPos="none" className="w-[181px] justify-center">
+                            <Button onClick={() => router.push("/quiz/questions")} variant="default" size="large" iconPos="none" className="w-[181px] justify-center">
                                 Take the Quiz
                             </Button>
                     </div>
