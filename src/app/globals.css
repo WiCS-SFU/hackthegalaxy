@@ -217,7 +217,7 @@
   /*mascot font*/
   .text-jocky-normal {
     color: #f6c7c7;
-    font-family: "Jocky Starline";
+    font-family: var(--font-jocky);
     font-size: 125.22px;
     font-style: normal;
     font-weight: 400;
