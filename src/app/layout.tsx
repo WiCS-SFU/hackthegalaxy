@@ -9,6 +9,8 @@ import AOSProvider from "@/components/aos-interactions/AOSProvider";
 
 const jockyStarline = localFont({
   src: "./fonts/JockyStarline.ttf",
+  variable: "--font-jocky",
+  display: "swap",
 });
 
 const geistSans = Geist({
@@ -44,7 +46,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${splineSans.variable} ${oxanium.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${splineSans.variable} ${oxanium.variable} ${jockyStarline.variable} antialiased`}
       >
         <AOSProvider />
         <Navbar />
