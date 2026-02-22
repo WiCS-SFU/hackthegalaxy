@@ -47,8 +47,6 @@ export default function Quiz() {
                                 Take the Quiz
                             </Button>
                     </div>
-                    
-
                 </div>
             </div>
         </section>
