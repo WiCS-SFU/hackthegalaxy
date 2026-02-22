@@ -1,9 +1,14 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Spline_Sans, Oxanium } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FooterCounter from "@/components/FooterCounter";
+
+const jockyStarline = localFont({
+  src: "./fonts/JockyStarline.ttf",
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -42,7 +47,7 @@ export default function RootLayout({
       >
         <Navbar />
         {children}
-        <FooterCounter/>
+        <FooterCounter />
         <Footer />
       </body>
     </html>
