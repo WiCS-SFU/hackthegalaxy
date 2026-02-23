@@ -21,8 +21,8 @@ export default function OurTeam() {
           mascotImg={PoppyImg.src}
           pawImg={PoppyPaw.src}
           mascotPos=""
-          pawPos=""
-          namePos=""
+          pawPos="w-[145.457px] h-[128.499px] right-[-6px] bottom-[-8px] rotate-[17.884deg]"
+          namePos="rotate-[-7.461deg]"
         ></MascotCard>
 
         <MascotCard
@@ -33,7 +33,7 @@ export default function OurTeam() {
           pawImg={PiperPaw.src}
           mascotPos=""
           pawPos=""
-          namePos=""
+          namePos="rotate-[2.417deg]"
         ></MascotCard>
 
         <MascotCard
@@ -44,7 +44,7 @@ export default function OurTeam() {
           pawImg={PingPaw.src}
           mascotPos=""
           pawPos=""
-          namePos=""
+          namePos="rotate-[-8.073deg]"
         ></MascotCard>
       </div>
     </section>
