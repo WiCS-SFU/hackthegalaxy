@@ -17,6 +17,7 @@ export default function QuestionCard({
         image: string;
         question: string;
         options: string[];
+        option_icons: string[];
     };
     current: number;
     total: number;
@@ -58,7 +59,7 @@ export default function QuestionCard({
                     <div className = "p-xl w-full bg-pink-200/15 rounded-md overflow-hidden inline-flex justify-start items-start gap-2.5">
                         <div className="w-5 h-5 relative overflow-hidden">
                             <Image 
-                                src="/flag.svg"
+                                src={data.option_icons[0]}
                                 alt="Flag"
                                 fill
                                 className="object-cover"
@@ -72,7 +73,7 @@ export default function QuestionCard({
                     <div className = "p-xl w-full bg-pink-200/15 rounded-md overflow-hidden inline-flex justify-start items-start gap-2.5">
                         <div className="w-5 h-5 relative overflow-hidden">
                             <Image 
-                                src="/book-open.svg"
+                                src={data.option_icons[1]}
                                 alt="Flag"
                                 fill
                                 className="object-cover"
@@ -86,7 +87,7 @@ export default function QuestionCard({
                     <div className = "p-xl w-full bg-pink-200/15 rounded-md overflow-hidden inline-flex justify-start items-start gap-2.5">
                         <div className="w-5 h-5 relative overflow-hidden">
                             <Image 
-                                src="/lightning-bolt.svg"
+                                src={data.option_icons[2]}
                                 alt="Flag"
                                 fill
                                 className="object-cover"
