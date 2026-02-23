@@ -12,7 +12,7 @@ export const questions = [
 
     {
         id: 2,
-        image: "",
+        image: "/catsign.png",
         question: "Your team is picking a project name. What is your contribution?",
         options: [
             "It has to be a pun. If the name doesn't make the judges laugh or cringe, we’ve already lost the battle.",
@@ -78,7 +78,7 @@ export const questions = [
 
     {
         id: 8,
-        image: "/bearstar.svg",
+        image: "/catsign.png",
         question: "It’s 7:00 PM. Submission is in 2 hours. You are...",
         options: [
             "Moving in double-time, finishing the last feature with laser-focus.",
@@ -89,7 +89,7 @@ export const questions = [
 
     {
         id: 9,
-        image: "/SpaceSuitCat.svg",
+        image: "/bearstar.svg",
         question: "What is the soul of a successful project?",
         options: [
             "The way people smile when they hear the pitch and the catchy URL they can actually remember.",
@@ -100,7 +100,7 @@ export const questions = [
 
     {
         id: 10,
-        image: "",
+        image: "/SpaceSuitCat.svg",
         question: "How does the 'Final Git Push' feel?",
         options: [
             "Like a theorem finally proven to be logically sound.",
