@@ -18,7 +18,7 @@ export default function FAQ() {
           {/*FAQ Text*/}
           <h2 className="mt-xl text-heading-lg text-white">FAQs</h2>
         </div>
-        <div className="mt-xl space-y-4">
+        <div className="mt-xl space-y-4 whitespace-pre-line">
           {faqs.map((faq, index) => (
             <FAQItem // faq list item w q, answer, open state, toggle function
               key={faq.question}
