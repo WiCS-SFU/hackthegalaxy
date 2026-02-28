@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FooterCounter from "@/components/FooterCounter";
+import AOSProvider from "@/components/aos-interactions/AOSProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -40,9 +41,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${splineSans.variable} ${oxanium.variable} antialiased`}
       >
+        <AOSProvider />
         <Navbar />
         {children}
-        <FooterCounter/>
+        <FooterCounter />
         <Footer />
       </body>
     </html>
