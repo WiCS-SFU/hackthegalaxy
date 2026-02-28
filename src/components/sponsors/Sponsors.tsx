@@ -20,20 +20,47 @@ export default function Sponsors() {
       <div className="mt-xl w-full">
         <div className="flex flex-col gap-4">
           {/* GOLD */}
-          <SponsorCard tier="gold" />
-          <SponsorCard tier="gold" />
-
+          <SponsorCard 
+            tier="gold" 
+            imageSrc="/sponsors/transoftSolutionsLogo.png" 
+            altText="Transoft Solutions" 
+          />
+          <SponsorCard 
+            tier="gold" 
+            imageSrc="/sponsors/Excelar_White_Logo.svg" 
+            altText="Excelar" 
+          />
           {/* SILVER */}
           <div className="grid grid-cols-2 gap-3">
-            <SponsorCard tier="silver" />
-            <SponsorCard tier="silver" />
+            {/* <SponsorCard
+              tier="silver"
+              imageSrc="Deloitte Logo.ai"
+              altText="Deloitte"
+            /> */}
+            {/* <SponsorCard
+              tier="silver"
+              imageSrc="CHANGE TO MATCH SAP LOGO"
+              altText="SAP"
+            /> */}
           </div>
 
           {/* BRONZE */}
           <div className="grid grid-cols-3 gap-4">
-            <SponsorCard tier="bronze" />
-            <SponsorCard tier="bronze" />
-            <SponsorCard tier="bronze" />
+            <SponsorCard
+              tier="bronze"
+              imageSrc="/sponsors/OldSpaghettiFactory.png"
+              altText="Old Spaghetti Factory"
+            />
+            {/* <SponsorCard
+              tier="bronze"
+              imageSrc="CHANGE FOR CRUST N CRUNCH LOGO"
+              altText="Crust N Crunch"
+            /> */}
+            {/* <SponsorCard
+              tier="bronze"
+              imageSrc="CHANGE FOR STEVE'S POKE LOGO"
+              altText="Steve's Poke"
+            /> */}
           </div>
         </div>
       </div>

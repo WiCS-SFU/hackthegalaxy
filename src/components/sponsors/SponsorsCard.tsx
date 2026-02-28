@@ -2,6 +2,12 @@ import Image from "next/image";
 
 type Tier = "gold" | "silver" | "bronze";
 
+type SponsorCardProps = {
+  tier: Tier;
+  imageSrc: string;
+  altText: string;
+};
+
 // SponsorsCard component with dynamic styling based on tier
 
 const tierConfig: Record<Tier, { containerClass: string; imageWidth: number; imageHeight: number }> = {
@@ -23,17 +29,15 @@ const tierConfig: Record<Tier, { containerClass: string; imageWidth: number; ima
 };
 
 // Added logo of sponsorships to the card
-
-export default function SponsorCard({ tier }: { tier: Tier }) {
+export default function SponsorCard({ tier, imageSrc, altText }: SponsorCardProps) {
   const config = tierConfig[tier];
-  
   return (
     <div
       className={`relative flex w-full items-center justify-center rounded-[6px] ${config.containerClass}`}
     >
       <Image
-        src="/sponsors/transoftSolutionsLogo.png"
-        alt="Transoft Solutions"
+        src={imageSrc}
+        alt={altText}
         width={config.imageWidth}
         height={config.imageHeight}
         className="object-contain"
