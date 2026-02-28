@@ -29,7 +29,6 @@ const oxanium = Oxanium({
 export const metadata: Metadata = {
   title: "Hack the Galaxy",
   description: "SFU WiCS' Premier Hackathon",
-  icons: {icon: "/favicon.ico",},
 };
 
 export default function RootLayout({
