@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function About() {
+export default function About() { 
   return (
     <section id="about" className="bg-neutral-800 flex flex-col w-full">
       {/* ================= MOBILE ================= */}
@@ -12,7 +12,7 @@ export default function About() {
               About Us
             </span>
 
-            <h2 className="text-display-md text-neutral-100 mt-xl">
+            <h2 className="text-heading-lg text-neutral-100 mt-xl">
               What is Hack the Galaxy?
             </h2>
 
@@ -67,7 +67,7 @@ export default function About() {
             {/* Cards (mobile = your original 2-col grid) */}
             <div className="py-2xl grid grid-cols-2 gap-lg w-full">
               {/* PROMOTE */}
-              <div className="p-xl w-full max-w-[176px] min-h-[168px] bg-neutral-700 rounded-md inline-flex flex-col justify-between items-start overflow-hidden">
+              <div className="p-xl w-full min-h-[168px] bg-neutral-700 rounded-md inline-flex flex-col justify-between items-start overflow-hidden">
                 <div className="w-6 h-6 relative overflow-hidden">
                   <Image
                     src="/speakerphone.svg"
@@ -88,7 +88,7 @@ export default function About() {
               </div>
 
               {/* SUPPORT */}
-              <div className="p-xl w-full max-w-[176px] min-h-[168px] bg-neutral-700 rounded-md inline-flex flex-col justify-between items-start overflow-hidden">
+              <div className="p-xl w-full min-h-[168px] bg-neutral-700 rounded-md inline-flex flex-col justify-between items-start overflow-hidden">
                 <div className="w-6 h-6 relative overflow-hidden">
                   <Image
                     src="/academic-cap.svg"
@@ -109,7 +109,7 @@ export default function About() {
               </div>
 
               {/* CHALLENGE */}
-              <div className="p-xl w-full max-w-[176px] min-h-[168px] bg-neutral-700 rounded-md inline-flex flex-col justify-between items-start overflow-hidden">
+              <div className="p-xl w-full min-h-[168px] bg-neutral-700 rounded-md inline-flex flex-col justify-between items-start overflow-hidden">
                 <div className="w-6 h-6 relative overflow-hidden">
                   <Image
                     src="/lightning-bolt.svg"
@@ -130,7 +130,7 @@ export default function About() {
               </div>
 
               {/* BUILD */}
-              <div className="p-xl w-full max-w-[176px] min-h-[168px] bg-neutral-700 rounded-md inline-flex flex-col justify-between items-start overflow-hidden">
+              <div className="p-xl w-full min-h-[168px] bg-neutral-700 rounded-md inline-flex flex-col justify-between items-start overflow-hidden">
                 <div className="w-6 h-6 relative overflow-hidden">
                   <Image
                     src="/heart.svg"
@@ -282,12 +282,12 @@ export default function About() {
 
             {/* Desktop image: allow it to be rectangular if you want */}
             {/* Desktop image */}
-            <div className="mt-12 relative rounded-md overflow-hidden w-full aspect-[1626.36/800]">
+            <div className="mt-12 relative rounded-md overflow-hidden w-full aspect-[1700/900]">
               <Image
                 src="/team-photo.png"
                 alt="Team Photo"
                 fill
-                className="object-cover"
+                className="object-cover object-[center_-50%] scale-[1.13]"
                 priority
               />
             </div>

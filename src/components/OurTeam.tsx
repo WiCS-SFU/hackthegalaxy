@@ -20,7 +20,7 @@ export default function OurTeam() {
     <div
       id="our-team"
       className="w-full bg-neutral-800">
-      <section className="pt-3xl pb-32 max-w-[1280px] w-full mx-auto">
+      <section className="pt-2xl pb-3xl max-w-[1280px] w-full mx-auto">
         <div className="px-2xl mb-3xl"
           data-aos="fade-up"
           data-aos-offset="50"
@@ -32,10 +32,7 @@ export default function OurTeam() {
           <h1 className="text-acc ent-sm text-cyan-400">Meet The Organizers</h1>
           <h2 className="text-heading-lg text-neutral-100">Our Team</h2>
           <p className="text-body-sm text-neutral-100 mb-2xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla neque
-            tortor, hendrerit ut eleifend nec, aliquet sed nibh. Suspendisse
-            potenti. Nulla eu libero quam. Pellentesque faucibus ultricies quam,
-            eget cursus velit porta sit amet. Aenean sollicitudin lacus mauris.
+            Hack the Galaxy is entirely run by enthusiastic volunteers from Simon Fraser University Computing  Science students, faculty and staff. Throughout Hack the Galaxy, alongside technical workshops and industry networking, our team aims to create a space where the next generation is empowered to lead their own career path in tech.
           </p>
         </div>
 
