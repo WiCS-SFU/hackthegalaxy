@@ -32,11 +32,11 @@ export default function Sponsors() {
           />
           {/* SILVER */}
           <div className="grid grid-cols-2 gap-3">
-            {/* <SponsorCard
+            <SponsorCard
               tier="silver"
-              imageSrc="Deloitte Logo.ai"
+              imageSrc="/sponsors/DeloitteLogo.svg"
               altText="Deloitte"
-            /> */}
+            />
             {/* <SponsorCard
               tier="silver"
               imageSrc="CHANGE TO MATCH SAP LOGO"
