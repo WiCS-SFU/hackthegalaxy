@@ -4,7 +4,7 @@ import CosmosHeadshot from "@/assets/images/shared/Cosmos_Headshot.png";
 
 export default function OurTeam() {
   return (
-    <div className="mt-3xl mr-xl mb-3xl ml-xl">
+    <div id="our-team" className="mt-3xl mr-xl mb-3xl ml-xl">
       <div className="flex flex-col gap-lg pb-lg">
         <h1 className="text-acc ent-sm text-cyan-400">Meet The Organizers</h1>
         <h2 className="text-heading-lg text-neutral-100">Our Team</h2>
