@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { faqs } from "./faqData"; // Import FAQ data 
+import { faqs } from "./faqData"; // Import FAQ data
 import FAQItem from "./FAQItem"; // Import each FAQ item comp
 
 export default function FAQ() {
@@ -9,15 +9,23 @@ export default function FAQ() {
 
   return (
     // main section for FAQ
-    <section className="w-full bg-neutral-800 py-3xl px-xl flex flex-col -mt-[32px]">
+    <section
+      id="faq"
+      className="w-full bg-neutral-800 py-3xl px-xl flex flex-col -mt-[32px]"
+      data-aos="fade-up"
+      data-aos-offset="50"
+      data-aos-anchor-placement="top-center"
+      data-aos-once="true"
+      data-aos-duration="600"
+    >
       {/*Responsive Layout for Desktop and Mobile*/}
-      <div className = "grid grid-cols-1 lg:grid-cols-2 gap-xl">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-xl">
         <div>
           {/*Have Questions Text*/}
-          <span className="text-accent-sm text-cyan-400">HAVE QUESTIONS?</span> 
+          <span className="text-accent-sm text-cyan-400">HAVE QUESTIONS?</span>
           {/*FAQ Text*/}
-          <h2 className="mt-xl text-heading-lg text-white">FAQs</h2> 
-        </div> 
+          <h2 className="mt-xl text-heading-lg text-white">FAQs</h2>
+        </div>
         <div className="mt-xl space-y-4">
           {faqs.map((faq, index) => (
             <FAQItem // faq list item w q, answer, open state, toggle function
@@ -27,7 +35,7 @@ export default function FAQ() {
               isOpen={openIndex === index}
               onToggle={() => setOpenIndex(openIndex === index ? null : index)}
             />
-        ))}
+          ))}
         </div>
       </div>
     </section>

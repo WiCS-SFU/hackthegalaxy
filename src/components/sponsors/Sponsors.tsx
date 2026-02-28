@@ -2,22 +2,25 @@ import SponsorCard from "./SponsorsCard";
 
 export default function Sponsors() {
   return (
-    <section className="w-full bg-neutral-800 px-xl flex flex-col">
+    <section
+      id="sponsors"
+      className="w-full bg-neutral-800 px-xl flex flex-col"
+      data-aos="fade-up"
+      data-aos-offset="50"
+      data-aos-anchor-placement="top-center"
+      data-aos-once="true"
+      data-aos-duration="600"
+    >
       <div className="w-full">
-        <p className="text-accent-sm mb-2 text-cyan-400 font">
-          Our Partners
-        </p>
+        <p className="text-accent-sm mb-2 text-cyan-400 font">Our Partners</p>
 
-        <h2 className="text-heading-lg mb-4 text-white">
-          Sponsors
-        </h2>
+        <h2 className="text-heading-lg mb-4 text-white">Sponsors</h2>
 
         <p className="text-body-sm text-neutral-100">
-            Organized by dedicated student volunteers, this event is 
-            made possible through the generosity of our partners. 
-            Their support enables us to create meaningful 
-            opportunities and memorable experiences for our 
-            community.
+          Organized by dedicated student volunteers, this event is made possible
+          through the generosity of our partners. Their support enables us to
+          create meaningful opportunities and memorable experiences for our
+          community.
         </p>
       </div>
 
