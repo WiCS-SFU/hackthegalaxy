@@ -42,7 +42,7 @@ function TimeBlock({ value, label }: { value: string; label: string }) {
 
 export default function ApplyCountdown() {
   // Change this to your real deadline (local time)
-  const deadline = useMemo(() => new Date("2026-03-04T23:59:00"), []);
+  const deadline = useMemo(() => new Date("2026-03-07T23:59:00"), []);
 
   const [left, setLeft] = useState<TimeLeft>(() => calcTimeLeft(deadline));
 
