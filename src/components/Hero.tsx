@@ -1,18 +1,26 @@
 import Image from "next/image";
+import StarParallax from "./ui/effects/StarParallax";
 
 export default function Hero() {
   return (
     <div id="hero" className="bg-neutral-800 px-lg pb-2xl">
       <section className="relative w-full justify-end items-center text-white overflow-hidden rounded-3xl pt-36 pb-36">
-        <div className="overflow-hidden max-w-[393px] w-full mx-auto px-lg flex flex-col text-center">
+        {/* 1. Gradient background (back layer) */}
+        <div className="absolute inset-0 z-0 flex justify-center">
           <div
-            className="absolute z-0 w-[935.67px] h-[935.67px]
-                        left-[-284.44px] top-[207.35px]
+            className="absolute w-[935.67px] h-[935.67px] right-[-284.44px] top-[207.35px]
                         bg-[radial-gradient(ellipse_70%_89%_at_67.98%_64.87%,_#F7F0FB_0%,_#BE89E2_23%,_#4119B8_47%,_#16064A_77%,_#171621_100%)]
-                        rounded-full blur-3xl
-                    "
+                        rounded-full blur-3xl"
           />
+        </div>
 
+        {/* 2. Stars (middle layer - on top of gradient) */}
+        <div className="absolute inset-0 z-10">
+          <StarParallax />
+        </div>
+
+        {/* 3. Content (front layer) */}
+        <div className="relative z-20 overflow-hidden max-w-[393px] w-full mx-auto px-lg flex flex-col text-center">
           <div className="mb-3xl relative flex justify-center">
             <Image
               src="/hack-the-galaxy-logo.svg"
@@ -23,7 +31,7 @@ export default function Hero() {
             />
           </div>
 
-          <div className="py-3xl mb-3xl z-10">
+          <div className="py-3xl mb-3xl relative z-20">
             <p className="text-heading-sm text-white mb-lg">
               Where creativity takes orbit.
             </p>
