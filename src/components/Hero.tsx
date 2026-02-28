@@ -129,9 +129,12 @@ export default function Hero() {
 
             <div className="w-full flex justify-center">
               <button className="w-fit inline-flex items-center justify-center px-3.5 py-1.5 rounded-md border border-pink-100 hover:scale-105 transition-transform duration-300">
-                <span className="text-pink-100 text-xl font-bold font-['Oxanium'] uppercase tracking-wider">
-                  Apply Now
-                </span>
+                <Link
+                    href="https://events.mlh.io/events/13601-hack-the-galaxy"
+                    className="text-pink-100 text-accent-lg uppercase tracking-wider"
+                  >
+                    Apply Now
+                  </Link>
               </button>
             </div>
           </div>
