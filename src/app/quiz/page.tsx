@@ -4,11 +4,12 @@ import Image from 'next/image';
 import Button from "@/components/ui/Button";
 import { useRouter } from "next/navigation";
 import { PlusIcon } from "@heroicons/react/24/solid";
+import {motion} from "framer-motion";
 
-export default function QuizPage() {
+export default function QuizOverlay() {
     const router = useRouter();
     return (
-        <section className="relative min-h-screen bg-neutral-800 overflow-hidden">
+        <section className="relative min-h-screen bg-neutral-800">
             <div>
                 <div className="absolute z-0 w-[772.06px] h-[772.06px] 
                     left-[-300px] top-[460px]
