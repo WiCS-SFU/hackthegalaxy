@@ -45,7 +45,7 @@ export default function About() {
             <p className="text-body-lg text-neutral-100 mt-xl leading-snug">
               Hack the Galaxy will take place on{" "}
               <span className="font-bold">Saturday, March 14, 2026</span>, from{" "}
-              <span className="font-bold">9:00 AM to 9:00 PM</span> at{" "}
+              <span className="font-bold">8:30 AM to 10:00 PM</span> at{" "}
               <span className="font-bold">SFU Burnaby campus</span> (8888
               University Dr W).
             </p>
@@ -211,7 +211,7 @@ export default function About() {
                 <p className="text-body-lg text-neutral-100 mt-6 leading-snug">
                   Hack the Galaxy will take place on{" "}
                   <span className="font-bold">Saturday, March 14, 2026</span>,
-                  from <span className="font-bold">9:00 AM to 9:00 PM</span> at{" "}
+                  from <span className="font-bold">8:30 AM to 10:00 PM</span> at{" "}
                   <span className="font-bold">SFU Burnaby campus</span> (8888
                   University Dr W).
                 </p>
