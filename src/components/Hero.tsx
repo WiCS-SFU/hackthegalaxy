@@ -1,4 +1,5 @@
 import Image from "next/image";
+import StarParallax from "./ui/effects/StarParallax";
 
 export default function Hero() {
   return (
@@ -24,6 +25,12 @@ export default function Hero() {
                   "radial-gradient(49.86% 54.54% at 55.89% 57.72%, #F7F0FB 0%, #BE89E2 23.07%, #4119B8 46.77%, #16064A 77.15%, #171621 100%)",
               }}
             />
+
+            {/* STAR PARALLAX BACKGROUND */}
+            <div className="absolute inset-0">
+              <StarParallax />
+            </div>
+
             {/* INNER CONTENT CONTAINER (logo + text + meta) */}
             <div className="relative z-10 flex flex-col items-start pl-12">
               {/* Logo */}
@@ -89,6 +96,14 @@ export default function Hero() {
               />
             </div>
 
+            <div className="py-3xl mb-3xl relative z-20">
+              <p className="text-heading-sm text-white mb-lg">
+                Where creativity takes orbit.
+              </p>
+              <p className="text-body-lg text-white">
+                A 12-hour hackathon for women and non-binary students in tech.
+              </p>
+            </div>
             <div className="py-3xl mb-3xl">
               <p className="text-heading-sm mb-lg">
                 Where creativity takes orbit.
