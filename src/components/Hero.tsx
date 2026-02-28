@@ -9,7 +9,7 @@ export default function Hero() {
       <div className="hidden md:block">
         {/* OUTER CONTENT CONTAINER (page gutters) */}
         <div className="mx-auto w-full max-w-[1280px] px-6 pb-12">
-          <section className="relative w-full overflow-hidden rounded-3xl text-white pt-[275px] pb-[200px]">
+          <section className="relative w-full overflow-hidden rounded-3xl text-white md:min-h-[100svh] pt-[20vh] pb-10 flex items-center">
             {/* Background glow */}
             {/* Desktop background glow */}
             <div
@@ -80,7 +80,7 @@ export default function Hero() {
 
       {/* MOBILE HERO */}
       <div className="md:hidden">
-        <section className="relative w-full overflow-hidden rounded-3xl pt-36 pb-36 text-white">
+        <section className="relative w-full overflow-hidden rounded-3xl pt-[20vh] pb-10 text-white min-h-screen">
           {/* Background glow */}
           <div
             className="absolute z-0 w-[935.67px] h-[935.67px]
