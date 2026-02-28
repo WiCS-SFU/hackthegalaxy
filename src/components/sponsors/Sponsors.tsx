@@ -46,11 +46,11 @@ export default function Sponsors() {
 
           {/* BRONZE */}
           <div className="grid grid-cols-3 gap-4">
-            <SponsorCard
+            {/* <SponsorCard
               tier="bronze"
               imageSrc="/sponsors/OldSpaghettiFactory.png"
               altText="Old Spaghetti Factory"
-            />
+            /> */}
             {/* <SponsorCard
               tier="bronze"
               imageSrc="CHANGE FOR CRUST N CRUNCH LOGO"
