@@ -85,6 +85,11 @@ export default function Hero() {
             rounded-full blur-3xl"
           />
 
+          {/* STAR PARALLAX BACKGROUND */}
+          <div className="absolute inset-0 z-[1]">
+            <StarParallax />
+          </div>
+
           <div className="relative z-10 overflow-hidden max-w-[393px] w-full mx-auto px-lg flex flex-col text-center">
             <div className="mb-3xl flex justify-center">
               <Image
