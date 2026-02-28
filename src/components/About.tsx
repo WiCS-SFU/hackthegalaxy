@@ -2,15 +2,7 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <section
-      id="about"
-      className="bg-neutral-800 flex flex-col w-full"
-      data-aos="fade-up"
-      data-aos-offset="50"
-      data-aos-anchor-placement="top-center"
-      data-aos-once="true"
-      data-aos-duration="600"
-    >
+    <section id="about" className="bg-neutral-800 flex flex-col w-full">
       {/* ================= MOBILE ================= */}
       <div className="md:hidden">
         {/* About Us */}
