@@ -157,7 +157,7 @@ export default function About() {
                 src="/team-photo.png"
                 alt="Team Photo"
                 fill
-                className="object-cover scale-[1.32] object-[76%_20%]"
+                className="object-cover translate-y-[14%] scale-[1.3] object-[76%]"
                 priority
               />
             </div>
