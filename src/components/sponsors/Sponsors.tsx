@@ -31,11 +31,13 @@ export default function Sponsors() {
               tier="gold" 
               imageSrc="/sponsors/transoftSolutionsLogo.png" 
               altText="Transoft Solutions" 
+              href="https://www.transoftsolutions.com/"
             />
             <SponsorCard 
               tier="gold" 
               imageSrc="/sponsors/Excelar_White_Logo.svg" 
               altText="Excelar" 
+              href="https://www.excelar.ca/"
             />
             {/* SILVER */}
             <div className="grid grid-cols-2 gap-3">
@@ -43,6 +45,7 @@ export default function Sponsors() {
                 tier="silver"
                 imageSrc="/sponsors/DeloitteLogo.svg"
                 altText="Deloitte"
+                href="https://www.deloitte.com/ca/en.html"
               />
               {/* <SponsorCard
                 tier="silver"
