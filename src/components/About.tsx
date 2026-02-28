@@ -282,7 +282,7 @@ export default function About() {
 
             {/* Desktop image: allow it to be rectangular if you want */}
             {/* Desktop image */}
-            <div className="mt-12 relative rounded-md overflow-hidden w-full aspect-[1626.36/1084.37]">
+            <div className="mt-12 relative rounded-md overflow-hidden w-full aspect-[1626.36/800]">
               <Image
                 src="/team-photo.png"
                 alt="Team Photo"

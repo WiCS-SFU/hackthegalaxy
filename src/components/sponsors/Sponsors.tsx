@@ -2,16 +2,17 @@ import SponsorCard from "./SponsorsCard";
 
 export default function Sponsors() {
   return (
-    <section
+    <div
       id="sponsors"
-      className="w-full bg-neutral-800 py-3xl px-xl flex flex-col md:px-35"
+      className="w-full bg-neutral-800">
+      <section className="mx-auto w-full max-w-[1280px] bg-neutral-800 py-3xl px-xl flex flex-col md:px-35"
       data-aos="fade-up"
       data-aos-offset="50"
       data-aos-anchor-placement="top-center"
       data-aos-once="true"
       data-aos-duration="600"
     >
-      <div className="w-full">
+      <div className="w-full bg-neutral-800">
         <p className="text-accent-sm mb-2 text-cyan-400 font">Our Partners</p>
 
         <h2 className="text-heading-lg mb-4 text-white">Sponsors</h2>
@@ -73,5 +74,7 @@ export default function Sponsors() {
         </div>
       </div>
     </section>
+    </div>
+    
   );
 }
