@@ -95,7 +95,7 @@ export default function Hero() {
           </div>
 
           <div className="relative z-10 overflow-hidden max-w-[393px] w-full mx-auto px-lg flex flex-col text-center">
-            <div className="mb-3xl flex justify-center">
+            <div className="mt-16 mb-3xl flex justify-center">
               <Image
                 src="/hack-the-galaxy-logo.svg"
                 alt="Hack the Galaxy logo"
