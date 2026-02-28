@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 import StarParallax from "./ui/effects/StarParallax";
 
@@ -64,9 +65,12 @@ export default function Hero() {
               {/* CTA */}
               <div className="mt-6 pl-12">
                 <button className="inline-flex items-center justify-center px-5 py-2 rounded-md border border-pink-100 hover:scale-105 transition-transform">
-                  <span className="text-pink-100 text-accent-lg uppercase tracking-wider">
+                  <Link
+                    href="https://events.mlh.io/events/13601-hack-the-galaxy"
+                    className="text-pink-100 text-accent-lg uppercase tracking-wider"
+                  >
                     Apply Now
-                  </span>
+                  </Link>
                 </button>
               </div>
             </div>

@@ -21,7 +21,10 @@ export default function Navbar() {
     { label: "FAQ", href: "#faq" },
     { label: "SPONSORS", href: "#sponsors" },
     { label: "OUR TEAM", href: "#our-team" },
-    { label: "APPLY", href: "#apply" },
+    {
+      label: "APPLY",
+      href: "https://events.mlh.io/events/13601-hack-the-galaxy",
+    },
   ];
 
   const handleAnchorClick =
@@ -96,8 +99,10 @@ export default function Navbar() {
 
         {/* MOBILE: APPLY (right) */}
         <Link
-          href="#apply"
-          onClick={handleAnchorClick("#apply")}
+          href="https://events.mlh.io/events/13601-hack-the-galaxy"
+          onClick={handleAnchorClick(
+            "https://events.mlh.io/events/13601-hack-the-galaxy",
+          )}
           className="md:hidden flex items-center justify-center py-2 px-4 rounded-md border border-pink-100 text-heading-xs text-neutral-100 hover:bg-purple-600 hover:border-purple-600 transition-colors"
         >
           APPLY

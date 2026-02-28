@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -28,7 +28,11 @@ export default function Footer() {
         <div className="mx-auto w-full max-w-7xl flex items-center justify-between px-8 py-8">
           {/* Logo */}
           <div className="flex items-center justify-center shrink-0 w-[276px] h-[100px]">
-            <a href="#hero" aria-label="Back to top" onClick={handleAnchorClick("#hero")}>
+            <a
+              href="#hero"
+              aria-label="Back to top"
+              onClick={handleAnchorClick("#hero")}
+            >
               <Image
                 src={fullLogo}
                 alt="Hack the Galaxy full logo"
@@ -46,7 +50,7 @@ export default function Footer() {
             </div>
 
             <Link
-              href="#apply"
+              href="https://events.mlh.io/events/13601-hack-the-galaxy"
               className="inline-flex items-center justify-center px-4 py-2 rounded-md border border-pink-100 text-heading-xs text-neutral-100 transition-colors hover:bg-purple-700 hover:border-purple-700"
             >
               APPLY NOW
@@ -100,7 +104,11 @@ export default function Footer() {
         <div className="mx-auto w-full px-4 py-8 flex flex-col gap-4 sm:max-w-[393px]">
           <div className="flex items-start justify-between gap-4">
             <div className="shrink-0 w-[193px] max-w-[45vw]">
-              <a href="#hero" aria-label="Back to top" onClick={handleAnchorClick("#hero")}>
+              <a
+                href="#hero"
+                aria-label="Back to top"
+                onClick={handleAnchorClick("#hero")}
+              >
                 <Image
                   src={fullLogo}
                   alt="Hack the Galaxy full logo"
@@ -118,7 +126,7 @@ export default function Footer() {
               </div>
 
               <Link
-                href="#apply"
+                href="https://events.mlh.io/events/13601-hack-the-galaxy"
                 className="inline-flex items-center justify-center px-1.5 py-1.5 rounded-md border border-pink-100 text-accent-xs text-neutral-100 transition-colors hover:bg-purple-700 hover:border-purple-700"
               >
                 APPLY NOW

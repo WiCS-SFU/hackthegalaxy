@@ -33,9 +33,7 @@ function TimeBlock({ value, label }: { value: string; label: string }) {
         {value}
       </div>
 
-      <div className="text-accent-sm uppercase text-pink-300">
-        {label}
-      </div>
+      <div className="text-accent-sm uppercase text-pink-300">{label}</div>
     </div>
   );
 }
@@ -65,16 +63,15 @@ export default function ApplyCountdown() {
         <p className="text-center text-body-lg text-neutral-100">
           {isClosed ? (
             <>
-              Applications are now <strong>closed </strong> for Hack the Galaxy 2026.
+              Applications are now <strong>closed </strong> for Hack the Galaxy
+              2026.
             </>
           ) : (
             <>
               <span className="block md:inline">
                 Applications are open, <strong>apply now!</strong>
               </span>
-              <span className="block md:inline">
-                {" "}Applications close in:
-              </span>
+              <span className="block md:inline"> Applications close in:</span>
             </>
           )}
         </p>
@@ -86,7 +83,7 @@ export default function ApplyCountdown() {
         </div>
 
         <Link
-          href="#apply"
+          href="https://events.mlh.io/events/13601-hack-the-galaxy"
           aria-disabled={isClosed}
           className={`inline-flex items-center justify-center rounded-md border px-4 py-2 text-accent-lg transition-colors ${
             isClosed
