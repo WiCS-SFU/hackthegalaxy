@@ -2,8 +2,9 @@ import SponsorCard from "./SponsorsCard";
 
 export default function Sponsors() {
   return (
-    <section className="w-full bg-neutral-800 px-xl flex flex-col">
-      <div className="w-full">
+    <div className="w-full bg-neutral-800">
+      <section className="mx-auto w-full max-w-[1280px] bg-neutral-800 px-xl flex flex-col">
+      <div className="w-full bg-neutral-800">
         <p className="text-accent-sm mb-2 text-cyan-400 font">
           Our Partners
         </p>
@@ -43,5 +44,7 @@ export default function Sponsors() {
         </div>
       </div>
     </section>
+    </div>
+    
   );
 }

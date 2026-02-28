@@ -9,7 +9,8 @@ export default function FAQ() {
 
   return (
     // main section for FAQ
-    <section className="w-full bg-neutral-800 py-3xl px-xl flex flex-col -mt-[32px]">
+    <div className="w-full bg-neutral-800">
+      <section className="mx-auto w-full max-w-[1280px]  py-3xl px-xl flex flex-col -mt-[32px]">
       {/*Responsive Layout for Desktop and Mobile*/}
       <div className = "grid grid-cols-1 lg:grid-cols-2 gap-xl">
         <div>
@@ -31,5 +32,7 @@ export default function FAQ() {
         </div>
       </div>
     </section>
+    </div>
+    
   );
 }
