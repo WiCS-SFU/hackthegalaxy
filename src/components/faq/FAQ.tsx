@@ -12,6 +12,11 @@ export default function FAQ() {
     <section
       id="faq"
       className="w-full bg-neutral-800 py-3xl px-xl flex flex-col -mt-[32px]"
+      data-aos="fade-up"
+      data-aos-offset="50"
+      data-aos-anchor-placement="top-center"
+      data-aos-once="true"
+      data-aos-duration="600"
     >
       {/*Responsive Layout for Desktop and Mobile*/}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-xl">
