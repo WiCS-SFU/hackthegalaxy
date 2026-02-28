@@ -10,7 +10,7 @@ import fullLogo from "@/assets/images/shared/full_logo.svg";
 
 type NavItem = {
   label: string;
-  href: string; 
+  href: string;
 };
 
 export default function Navbar() {
@@ -57,8 +57,18 @@ export default function Navbar() {
         </button>
 
         {/* DESKTOP: Logo */}
-        <Link href="/" onClick={handleAnchorClick("#hero")} className="hidden md:flex items-center gap-3">
-          <Image src={logo} alt="Hack the Galaxy logo" width={50} height={45} priority />
+        <Link
+          href="/"
+          onClick={handleAnchorClick("#hero")}
+          className="hidden md:flex items-center gap-3"
+        >
+          <Image
+            src={logo}
+            alt="Hack the Galaxy logo"
+            width={50}
+            height={45}
+            priority
+          />
         </Link>
 
         {/* DESKTOP NAV */}
@@ -134,7 +144,9 @@ export default function Navbar() {
                   <li
                     key={item.href}
                     className={`w-full flex flex-col items-start py-2 ${
-                      index !== arr.length - 1 ? "border-b-2 border-neutral-100" : ""
+                      index !== arr.length - 1
+                        ? "border-b-2 border-neutral-100"
+                        : ""
                     }`}
                   >
                     <Link
@@ -152,20 +164,38 @@ export default function Navbar() {
             <div className="w-full flex flex-col items-center gap-6">
               <div className="w-full flex justify-center items-center gap-x-xl text-body-sm-bold uppercase text-pink-300">
                 <a href="mailto:wics@sfu.ca">EMAIL</a>
-                <a href="https://www.instagram.com/sfuwics/" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://www.instagram.com/sfuwics/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   INSTAGRAM
                 </a>
-                <a href="https://www.linkedin.com/company/sfu-wics/" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://www.linkedin.com/company/sfu-wics/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   LINKEDIN
                 </a>
-                <a href="https://www.sfuwics.com/" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://www.sfuwics.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   SFUWICS.COM
                 </a>
               </div>
 
               <div className="w-full flex justify-center">
                 <Link href="/" onClick={handleAnchorClick("#hero")}>
-                  <Image src={fullLogo} alt="Hack the Galaxy full logo" width={150} height={45} priority />
+                  <Image
+                    src={fullLogo}
+                    alt="Hack the Galaxy full logo"
+                    width={150}
+                    height={45}
+                    priority
+                  />
                 </Link>
               </div>
             </div>
