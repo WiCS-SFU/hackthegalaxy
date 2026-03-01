@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import Button from "@/components/ui/Button";
-import { PlusIcon } from "@heroicons/react/24/solid";
 import { useRouter } from "next/navigation";
+import { useState, useEffect } from "react";
 
 export default function QuestionCard({
     data,
@@ -21,10 +21,14 @@ export default function QuestionCard({
     };
     current: number;
     total: number;
-    onNext: () => void;
+    onNext: (selectedIndex: number) => void;
     onBack: () => void;
 }) {
-    const router = useRouter();
+    const [selected, setSelected] = useState<number | null>(null);
+    useEffect(() => {
+        setSelected(null);
+    }, [data.id]);
+
     return (
         <section className="relative min-h-screen bg-neutral-800 overflow-hidden">
             <div className="absolute z-0 w-[772.06px] h-[772.06px] 
@@ -32,7 +36,7 @@ export default function QuestionCard({
                     bg-[radial-gradient(ellipse_72.73%_75.28%_at_67.98%_65.87%,_var(--pink-100,_#F7F0FB)_0%,_var(--pink-400,_#BE89E2)_23%,_var(--purple-600,_#4119B8)_47%,_var(--purple-800,_#16064A)_77%,_var(--neutral-800,_#171621)_100%)] 
                     rounded-full blur-[53.84px]"/>
 
-            <div className="relative flex flex-col items-center text-center">
+            <div className="relative flex flex-col items-center text-center min-h-screen">
                 <div className="mt-30">
                     <Image
                         src={data.image}
@@ -55,52 +59,39 @@ export default function QuestionCard({
                     </p>
                 </div>
 
-                <div className = "grid grid-cols-1 w-full px-4 gap-xl">
-                    <div className = "p-xl w-full bg-pink-200/15 rounded-md overflow-hidden inline-flex justify-start items-start gap-2.5">
-                        <div className="w-5 h-5 relative overflow-hidden">
-                            <Image 
-                                src={data.option_icons[0]}
-                                alt="Flag"
-                                fill
-                                className="object-cover"
-                                priority/>
+                {/* Options */}
+                <div className="grid grid-cols-1 w-full gap-xl px-xl">
+                {data.options.map((option, index) => (
+                    <div
+                    key={index}
+                    onClick={() => setSelected(index)}
+                    className={`p-xl w-full rounded-md cursor-pointer transition-all 
+                        ${
+                        selected === index
+                            ? "bg-pink-200/35"
+                            : "bg-pink-200/15"
+                        }
+                    `}
+                    >
+                    <div className="flex items-start gap-2.5">
+                        <div className="w-5 h-5 relative">
+                        <Image
+                            src={data.option_icons[index]}
+                            alt="icon"
+                            fill
+                            className="object-cover"
+                            priority
+                        />
                         </div>
-                        <div className="flex-1 justify-start text-neutral-100 text-body-sm text-left leading-5">
-                            <p>{data.options[0]}</p>
-                        </div>
+                        <p className="flex-1 text-neutral-100 text-body-sm text-left leading-5">
+                        {option}
+                        </p>
                     </div>
-
-                    <div className = "p-xl w-full bg-pink-200/15 rounded-md overflow-hidden inline-flex justify-start items-start gap-2.5">
-                        <div className="w-5 h-5 relative overflow-hidden">
-                            <Image 
-                                src={data.option_icons[1]}
-                                alt="Flag"
-                                fill
-                                className="object-cover"
-                                priority/>
-                        </div>
-                        <div className="flex-1 justify-start text-neutral-100 text-body-sm text-left leading-5">
-                            <p>{data.options[1]}</p>
-                        </div>
                     </div>
-
-                    <div className = "p-xl w-full bg-pink-200/15 rounded-md overflow-hidden inline-flex justify-start items-start gap-2.5">
-                        <div className="w-5 h-5 relative overflow-hidden">
-                            <Image 
-                                src={data.option_icons[2]}
-                                alt="Flag"
-                                fill
-                                className="object-cover"
-                                priority/>
-                        </div>
-                        <div className="flex-1 justify-start text-neutral-100 text-body-sm text-left leading-5">
-                            <p>{data.options[2]}</p>
-                        </div>
-                    </div>
-
+                ))}
                 </div>
 
-                <div className="z-10 mt-7 mb-5 flex gap-4">
+                <div className="z-10 mt-auto mb-5 flex gap-4">
                     {current >1 && (
                         <Button
                             onClick={onBack}
@@ -111,8 +102,8 @@ export default function QuestionCard({
                         >Back</Button>
                     )}
                     
-                    <Button onClick={onNext} variant="default" size="large" iconPos="none" className="w-[70px] justify-center">
-                        Next
+                    <Button onClick={() => onNext(selected ?? 0)} variant="default" size="large" iconPos="none" className="w-[70px] justify-center">
+                        {current === total ? "Finish" : "Next"}
                     </Button>
                 </div>
             </div>
