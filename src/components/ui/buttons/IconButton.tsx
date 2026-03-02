@@ -1,3 +1,34 @@
+/**
+ * Icon Button Component:-------------------------------------------
+ *
+ * Props:
+ * - variant: "default" | "outline"
+ * - icon?: React node (optional)
+ * - disabled?: boolean
+ *
+ * Default Button with <IconButton/>:-------------------------------
+ * variant = "default"
+ * disable = false
+ * 
+ * 
+ * Common Usage:-------------------------------
+ * 
+ * NORMAL ICON BUTTON WITH X ICON:
+ * import { XMarkIcon } from "@heroicons/react/24/outline";
+ * <IconButton
+        variant="default"
+        icon={<XMarkIcon className="h-5 w-5 stroke-3" />}
+      ></IconButton>
+ * 
+ * DISABLE STATE:
+ * import { XMarkIcon } from "@heroicons/react/24/outline";
+ * <IconButton
+        variant="default"
+        icon={<XMarkIcon className="h-5 w-5 stroke-3" />}
+        disabled
+      ></IconButton>
+ */
+
 import { forwardRef } from "react";
 import React from "react";
 import { cva, VariantProps } from "class-variance-authority";
@@ -14,7 +45,7 @@ const iconButtonStyles = cva(base, {
       default:
         "bg-pink-100 text-purple-600 hover:text-pink-100 hover:bg-purple-600",
       outline:
-        "text-pink-100 border border-pink-100 hover:bg-purple-600 hover:text-pink-100",
+        "text-pink-100 border border-pink-100 hover:border-transparent hover:bg-purple-600 hover:text-pink-100",
     },
     disabled: {
       true: "pointer-events-none",
