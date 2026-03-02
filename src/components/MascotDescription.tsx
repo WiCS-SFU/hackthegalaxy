@@ -20,8 +20,10 @@ export default function OurTeam() {
           description="Never misses a workshop and never ships without pristine documentation. Powered by coffee, clean logic, and perfectly explained systems."
           mascotImg={PoppyImg.src}
           pawImg={PoppyPaw.src}
-          mascotPos=""
-          pawPos="w-[145.457px] h-[128.499px] right-[-6px] bottom-[-8px] rotate-[17.884deg]"
+          mascotPos="-translate-y-10 scale-110"
+          pawPos="translate-x-40 translate-y-22 scale-110 rotate-[17.884 deg] md:translate-x-40 md:translate-y-22 md:scale-105"
+          pawWidth={145.457}
+          pawHeight={128.499}
           namePos="rotate-[-7.461deg]"
         ></MascotCard>
 
@@ -31,8 +33,10 @@ export default function OurTeam() {
           description="Believes every problem can be solved with the right API. Types at warp speed and always has the library, cable, or workaround you need."
           mascotImg={PiperImg.src}
           pawImg={PiperPaw.src}
-          mascotPos=""
-          pawPos=""
+          mascotPos="translate-x-15 -translate-y-5 md:scale-112"
+          pawPos="-translate-x-18 -translate-y-15 md:scale-100"
+          pawWidth={169.992}
+          pawHeight={258.201}
           namePos="rotate-[2.417deg]"
         ></MascotCard>
 
@@ -42,9 +46,11 @@ export default function OurTeam() {
           description="Has a sixth sense for free food and Discord notifications. Keeps the team alive with memes, updates, and immaculate vibes."
           mascotImg={PingImg.src}
           pawImg={PingPaw.src}
-          mascotPos=""
-          pawPos=""
-          namePos="rotate-[-8.073deg]"
+          mascotPos="translate-x-8 -translate-y-12 scale-120"
+          pawPos="rotate-[-14.79 deg] -translate-x-12 translate-y-12 scale-120"
+          pawWidth={134.779}
+          pawHeight={150.617}
+          namePos="rotate-[-8.073 deg]"
         ></MascotCard>
       </div>
     </section>
