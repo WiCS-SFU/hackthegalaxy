@@ -53,8 +53,8 @@ const buttonStyles = cva(base, {
       outline: "text-pink-100 border-1 border-pink-100",
     },
     size: {
-      large: "px-lg py-lg gap-lg text-accent-md",
-      default: "px-xl py-lg gap-lg text-accent-default",
+      large: "px-lg py-lg gap-lg text-accent-lg",
+      default: "px-xl py-lg gap-lg text-accent-md",
       small: "px-xl py-lg gap-md text-accent-xs",
     },
     iconPos: {
