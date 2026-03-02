@@ -9,6 +9,8 @@ interface MascotProps {
   pawImg: string;
   mascotPos: string;
   pawPos: string;
+  pawWidth: number;
+  pawHeight: number;
   namePos: string;
 }
 
@@ -20,39 +22,45 @@ function MascotCard({
   pawImg,
   mascotPos,
   pawPos,
+  pawWidth,
+  pawHeight,
   namePos,
 }: MascotProps) {
   return (
     <section className="w-full rounded-xl bg-neutral-700 overflow-hidden">
-      <div className="flex flex-col items-center text-center mx-auto max-w-5xl gap-lg">
+      <div className="flex flex-col items-center text-center gap-lg">
+        {/* 1) Name */}
         <div className={clsx("text-jocky-normal", nameColour, namePos)}>
           {name}
         </div>
-        <div className="relative inline-block w-[251.427px] h-[220.429px]">
-          <Image
-            className={clsx("w-full h-full object-contain", mascotPos)}
-            src={mascotImg}
-            alt={`${name}-img`}
-            fill
-          />
-          <div
-            className={clsx(
-              "absolute right-0 bottom-0 w-[120px] h-[120px] pointer-events-none",
-              pawPos,
-            )}
-          >
+
+        {/* 2) Image block (mascot + paw) — fixed height so all cards match; enough room for paw */}
+        <div className="relative w-[251.427px] flex items-start justify-center">
+          <div className="relative w-full h-[220.429px]">
             <Image
-              src={pawImg}
-              alt={`${name}-paw`}
+              className={clsx("object-contain", mascotPos)}
+              src={mascotImg}
+              alt={`${name}-img`}
               fill
-              className="object-contain"
             />
+            <div className={clsx("absolute", pawPos)}>
+              <Image
+                src={pawImg}
+                alt={`${name}-paw`}
+                width={pawWidth}
+                height={pawHeight}
+                className="object-contain pointer-events-none"
+              />
+            </div>
           </div>
         </div>
 
-        <p className="w-full text-white text-body-mascot px-3xl pb-[21px]">
-          {description}
-        </p>
+        {/* 3) Description */}
+        <div>
+          <p className="w-full text-white text-body-mascot px-3xl pb-[21px]">
+            {description}
+          </p>
+        </div>
       </div>
     </section>
   );
