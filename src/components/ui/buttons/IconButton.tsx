@@ -2,7 +2,7 @@
  * Icon Button Component:-------------------------------------------
  *
  * Props:
- * - variant: "default" | "outline"
+ * - variant: "default" | "outline" |"ghost"
  * - icon?: React node (optional)
  * - disabled?: boolean
  *
@@ -46,6 +46,7 @@ const iconButtonStyles = cva(base, {
         "bg-pink-100 text-purple-600 hover:text-pink-100 hover:bg-purple-600",
       outline:
         "text-pink-100 border border-pink-100 hover:border-transparent hover:bg-purple-600 hover:text-pink-100",
+      ghost: "text-pink-100 hover:bg-purple-600 hover:text-pink-100",
     },
     disabled: {
       true: "pointer-events-none",
@@ -63,6 +64,12 @@ const iconButtonStyles = cva(base, {
     //Outline disabled
     {
       variant: "outline",
+      disabled: true,
+      class: "border-purple-300 text-purple-300",
+    },
+    //Outline disabled
+    {
+      variant: "ghost",
       disabled: true,
       class: "border-purple-300 text-purple-300",
     },
