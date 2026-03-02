@@ -16,6 +16,7 @@
     "clsx": "^2.1.1",
     "framer-motion": "^12.34.3",
     "heroicons": "^2.2.0",
+    "ldrs": "^1.1.9",
     "next": "^16.1.6",
     "react": "19.2.3",
     "react-dom": "19.2.3"
