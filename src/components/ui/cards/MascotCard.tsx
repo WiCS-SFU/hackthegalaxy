@@ -35,7 +35,7 @@ function MascotCard({
         src={bgImg}
         alt={`${name}-bg`}
         fill
-        className="absolute inset-0 object-cover pointer-events-none -z-1"
+        className="object-cover pointer-events-none z-0"
       />
 
       <div className="flex flex-col items-center text-center gap-lg">
@@ -71,13 +71,6 @@ function MascotCard({
             {description}
           </p>
         </div>
-        {/* Star Backgrounds */}
-        <Image
-          src={bgImg}
-          alt={`${name}-bg`}
-          fill
-          className="object-cover pointer-events-none z-9"
-        />
       </div>
     </section>
   );
