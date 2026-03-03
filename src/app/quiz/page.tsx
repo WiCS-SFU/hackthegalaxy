@@ -1,7 +1,7 @@
 "use client";
 
 import Image from 'next/image';
-import Button from "@/components/ui/Button";
+import Button from "@/components/ui/buttons/Button";
 import { useRouter } from "next/navigation";
 import { PlusIcon } from "@heroicons/react/24/solid";
 import {motion} from "framer-motion";
@@ -41,13 +41,13 @@ export default function QuizOverlay() {
                     </div>
 
                     <div className="z-10 mt-8 mb-3">
-                            <Button onClick={() => router.push("/quiz/questions")} variant="default" size="large" iconPos="none" className="w-[181px] justify-center">
+                            <Button onClick={() => router.push("/quiz/questions")} variant="default" size="large" iconPos="none" className="w-[207px] justify-center">
                                 Take the Quiz
                             </Button>
                     </div>
 
                     <div className="z-10">
-                            <Button onClick={() => router.push("/")} variant="outline" size="large" iconPos="none" className="w-[181px] justify-center">
+                            <Button onClick={() => router.push("/")} variant="outline" size="large" iconPos="none" className="w-[207px] justify-center">
                                 Go back to home
                             </Button>
                     </div>
