@@ -13,6 +13,12 @@ const jockyStarline = localFont({
   display: "swap",
 });
 
+const jockyStarline = localFont({
+  src: "./fonts/JockyStarline.ttf",
+  variable: "--font-jocky",
+  display: "swap",
+});
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
