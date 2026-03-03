@@ -4,7 +4,8 @@ import { useSearchParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import Button from "@/components/ui/buttons/Button";
 import { ArrowDownIcon } from "@heroicons/react/24/outline";
-import { chaoticOrbit } from 'ldrs'
+import { chaoticOrbit } from 'ldrs';
+import { Jockey_One } from "next/font/google";
 
 export default function Results() {
     const params = useSearchParams();
@@ -87,7 +88,7 @@ export default function Results() {
                     </div>
 
                     <div className="text-heading-lg">
-                        You got <span className="text-pink-300">{character.name}</span>
+                        You got <span className="text-jocky-normal text-5xl ml-1">{character.name}</span>
                     </div>
 
                     <div className="z-10 mt-25">

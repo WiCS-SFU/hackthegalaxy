@@ -13,6 +13,8 @@ export default function Home() {
       <Hero />
       <About />
       <FAQ />
+      <MascotDescription />
+      <Quiz />
       <Sponsors />
       <OurTeam />
     </main>
