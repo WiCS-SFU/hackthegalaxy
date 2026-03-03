@@ -1,8 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import Button from "@/components/ui/Button";
-import { useRouter } from "next/navigation";
+import Button from "@/components/ui/buttons/Button";
+import { ArrowDownIcon } from "@heroicons/react/24/outline";
+import { ArrowUpIcon } from "@heroicons/react/24/outline";
 import { useState, useEffect } from "react";
 
 export default function QuestionCard({
@@ -91,18 +92,26 @@ export default function QuestionCard({
                 ))}
                 </div>
 
-                <div className="z-10 mt-auto mb-8 flex gap-4">
+                <div className="z-10 mt-auto mb-8 flex gap-17">
                     {current >1 && (
                         <Button
                             onClick={onBack}
-                            variant="default"
+                            variant="ghost"
                             size="large"
-                            iconPos="none"
+                            iconPos="right"
+                            icon={<ArrowUpIcon className="h-4 w-4 stroke-3" />} 
                             className="w-[70px] justify-center"
                         >Back</Button>
                     )}
                     
-                    <Button onClick={() => onNext(selected ?? 0)} variant="default" size="large" iconPos="none" className="w-[70px] justify-center">
+                    <Button 
+                        onClick={() => onNext(selected ?? 0)} 
+                        variant="ghost" 
+                        size="large" 
+                        iconPos="right"
+                        icon={<ArrowDownIcon className="h-4 w-4 stroke-3" />} 
+                        className="w-[70px] justify-center"
+                    >
                         {current === total ? "Finish" : "Next"}
                     </Button>
                 </div>
