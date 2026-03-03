@@ -115,6 +115,7 @@ const config: Config = {
       fontFamily: {
         sans: ['"Spline Sans"', "sans-serif"],
         accent: ["Oxanium", "sans-serif"],
+        jocky: ["Jocky Starline", "sans-serif"],
       },
       fontSize: {
         "display-lg": ["64px", { lineHeight: "120%", fontWeight: "700" }],
