@@ -100,7 +100,7 @@ export default function QuestionCard({
                             size="large"
                             iconPos="right"
                             icon={<ArrowUpIcon className="h-4 w-4 stroke-3" />} 
-                            className="w-[70px] justify-center"
+                            className="justify-center"
                         >Back</Button>
                     )}
                     
@@ -110,7 +110,7 @@ export default function QuestionCard({
                         size="large" 
                         iconPos="right"
                         icon={<ArrowDownIcon className="h-4 w-4 stroke-3" />} 
-                        className="w-[70px] justify-center"
+                        className="justify-center"
                     >
                         {current === total ? "Finish" : "Next"}
                     </Button>
