@@ -11,7 +11,14 @@ import PingBg from "@/assets/images/shared/mascot/ping-stars-bg.svg";
 
 export default function OurTeam() {
   return (
-    <section className="flex flex-col gap-xl mx-auto w-full max-w-[1280px] mt-xl mb-3xl px-2xl">
+    <section
+      className="flex flex-col gap-xl mx-auto w-full max-w-[1280px] mt-xl mb-3xl px-2xl"
+      data-aos="fade-up"
+      data-aos-offset="50"
+      data-aos-anchor-placement="top-center"
+      data-aos-once="true"
+      data-aos-duration="600"
+    >
       <h1 className="text-cyan-400 text-accent-sm">
         From Across The Galaxy...
       </h1>
