@@ -61,16 +61,18 @@ export default function Sponsors() {
                 imageSrc="/sponsors/OldSpaghettiFactory.png"
                 altText="Old Spaghetti Factory"
               /> */}
-              {/* <SponsorCard
+              <SponsorCard
                 tier="bronze"
-                imageSrc="CHANGE FOR CRUST N CRUNCH LOGO"
+                imageSrc="/sponsors/CrustNCrunch.png"
                 altText="Crust N Crunch"
-              /> */}
-              {/* <SponsorCard
+                href = "https://www.crustncrunch.com/"
+              />
+              <SponsorCard
                 tier="bronze"
-                imageSrc="CHANGE FOR STEVE'S POKE LOGO"
-                altText="Steve's Poke"
-              /> */}
+                imageSrc="/sponsors/SPB.png"
+                altText="Steve's Poke Bar"
+                href="https://www.stevespokebar.ca/"
+              />
             </div>
           </div>
         </div>
