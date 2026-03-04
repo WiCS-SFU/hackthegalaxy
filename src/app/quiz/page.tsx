@@ -9,7 +9,7 @@ import {motion} from "framer-motion";
 export default function QuizOverlay() {
     const router = useRouter();
     return (
-        <section className="relative min-h-screen bg-neutral-800">
+        <section className="relative h-screen overflow-hidden bg-neutral-800">
             <div>
                 <div className="absolute z-0 w-[772.06px] h-[772.06px] 
                     left-[-300px] top-[460px]

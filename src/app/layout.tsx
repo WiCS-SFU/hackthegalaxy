@@ -40,19 +40,22 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${splineSans.variable} ${oxanium.variable} ${jockyStarline.variable} antialiased`}
+        className={`
+          ${geistSans.variable}
+          ${geistMono.variable}
+          ${splineSans.variable}
+          ${oxanium.variable}
+          ${jockyStarline.variable}
+          antialiased
+        `}
       >
-        <AOSProvider />
-        <Navbar />
         {children}
-        <FooterCounter />
-        <Footer />
       </body>
     </html>
   );
