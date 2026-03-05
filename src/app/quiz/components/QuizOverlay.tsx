@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Button from "@/components/ui/Button";
 import { useRouter } from "next/navigation";
-import QuizOverlay from "./page";
 
 export default function QuizLayout({ children }: { children: React.ReactNode }) {
   const router = useRouter();
@@ -99,7 +98,7 @@ export default function QuizLayout({ children }: { children: React.ReactNode }) 
             h-[660px]
             rounded-[24px]
             border border-pink-200
-            bg-neutral-800
+            bg-blue-800
             overflow-hidden
             shadow-2xl
             isolate

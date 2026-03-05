@@ -8,12 +8,11 @@ import { useRouter } from "next/navigation";
 export default function Quiz() {
     const router = useRouter();
     return(
-        <section className="relative bg-neutral-800 overflow-hidden">
+        <>
+        <section className="relative bg-neutral-800 overflow-hidden md:hidden">
             <div className="w-full text-center">
-                <div className="absolute z-0 w-[772.06px] h-[772.06px] 
-                    left-[-300px] top-[80px]
-                    bg-[radial-gradient(ellipse_72.73%_75.28%_at_67.98%_65.87%,_var(--pink-100,_#F7F0FB)_0%,_var(--pink-400,_#BE89E2)_23%,_var(--purple-600,_#4119B8)_47%,_var(--purple-800,_#16064A)_77%,_var(--neutral-800,_#171621)_100%)] 
-                    rounded-full blur-[53.84px]"/>
+                          {/* Background glow (bigger / shifted for desktop) */}
+                <div className="absolute z-0 w-[772.06px] h-[772.06px] left-[-300px] top-[80px] bg-[radial-gradient(ellipse_72.73%_75.28%_at_67.98%_65.87%,_var(--pink-100,_#F7F0FB)_0%,_var(--pink-400,_#BE89E2)_23%,_var(--purple-600,_#4119B8)_47%,_var(--purple-800,_#16064A)_77%,_var(--neutral-800,_#171621)_100%)] rounded-full blur-[53.84px]"/>
 
                 <div className="relative flex flex-col items-center text-center">
                     <div className="absolute top-12 right-4">
@@ -77,5 +76,79 @@ export default function Quiz() {
                 </div>
             </div>
         </section>
-    )
+
+      {/* =======================
+          DESKTOP (>= md)
+         ======================= */}
+      <section className="relative hidden overflow-hidden bg-neutral-800 md:block">
+        <div className="mx-auto w-full max-w-[1280px] px-6">
+          {/* Background glow (bigger / shifted for desktop) */}
+            <div
+            className="
+                absolute z-0
+                w-[2331px] h-[1935px]
+                left-1/2 -translate-x-1/2
+                right-[-900px] bottom-[-900px]
+                rounded-full blur-[54px]
+                pointer-events-none
+            "
+            style={{
+                background:
+                "radial-gradient(ellipse 72.73% 75.28% at 67.98% 65.87%, #F7F0FB 0%, #BE89E2 23.07%, #4119B8 46.77%, #16064A 77.15%, #171621 100%)",
+            }}
+            />
+        <div className="absolute left-0 top-0 pointer-events-none">
+            <Image
+                src="/duck.png"
+                alt="Duck"
+                width={500}
+                height={500}
+                priority
+                className="block w-[500px] h-auto"
+            />
+            </div>
+
+          <div className="relative flex min-h-[720px] items-center justify-center">
+            {/* Logo */}
+            <div className="absolute right-0 top-8 z-10">
+              <Image src="/logo.svg" alt="Small Logo" width={95} height={88} priority />
+            </div>
+
+            {/* Center stack */}
+            <div className="relative z-10 flex flex-col items-center text-center">
+              <div className="mb-2">
+                <Image src="/galactic.svg" alt="Galactic Text" width={587} height={215} priority />
+              </div>
+
+              <p className="text-display-lg text-neutral-100 -mt-15">persona quiz</p>
+
+              <div className="mt-60">
+                <Button
+                  onClick={() => router.push("/quiz")}
+                  variant="default"
+                  size="large"
+                  iconPos="none"
+                  className="w-[360px] h-[40px] justify-center"
+                >
+                  Take the Quiz
+                </Button>
+              </div>
+            </div>
+
+            {/* Characters (desktop positions) */}
+            {/* Duck (desktop) */}
+
+            <div className="absolute left-[-100px] bottom-[-40px] z-10 rotate-6">
+              <Image src="/panda.svg" alt="Panda" width={350} height={350} />
+            </div>
+
+            <div className="absolute right-[-80px] bottom-[-40px] z-10 -rotate-12">
+              <Image src="/dog.png" alt="Dog" width={450} height={450} />
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </>
+  );
 }
