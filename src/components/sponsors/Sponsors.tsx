@@ -47,11 +47,12 @@ export default function Sponsors() {
                 altText="Deloitte"
                 href="https://www.deloitte.com/ca/en.html"
               />
-              {/* <SponsorCard
+              <SponsorCard
                 tier="silver"
-                imageSrc="CHANGE TO MATCH SAP LOGO"
+                imageSrc="/sponsors/SAP Logo.jpg"
                 altText="SAP"
-              /> */}
+                href="https://www.sap.com/canada/index.html"
+              />
             </div>
 
             {/* BRONZE */}
