@@ -17,10 +17,10 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   const navItems: NavItem[] = [
-    { label: "ABOUT", href: "#about" },
-    { label: "FAQ", href: "#faq" },
-    { label: "SPONSORS", href: "#sponsors" },
-    { label: "OUR TEAM", href: "#our-team" },
+    { label: "ABOUT", href: "/#about" },
+    { label: "FAQ", href: "/#faq" },
+    { label: "SPONSORS", href: "/#sponsors" },
+    { label: "OUR TEAM", href: "/#our-team" },
     {
       label: "APPLY",
       href: "https://events.mlh.io/events/13601-hack-the-galaxy",
@@ -62,7 +62,7 @@ export default function Navbar() {
         {/* DESKTOP: Logo */}
         <Link
           href="/"
-          onClick={handleAnchorClick("#hero")}
+          onClick={handleAnchorClick("/#hero")}
           className="hidden md:flex items-center gap-3"
         >
           <Image
