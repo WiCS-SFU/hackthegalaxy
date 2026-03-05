@@ -164,6 +164,26 @@
     line-height: 140%;
     font-weight: 400;
   }
+  .text-body-mascot {
+    color: #fff;
+    text-align: center;
+    font-family: var(--font-family-body, "Spline Sans");
+    font-size: 12.009px;
+    font-style: normal;
+    font-weight: var(--font-weight-regular, 400);
+    line-height: 140%; /* 16.812px */
+  }
+
+  .text-body-mascot {
+    color: #fff;
+    text-align: center;
+    font-family: var(--font-family-body, "Spline Sans");
+    font-size: 12.009px;
+    font-style: normal;
+    font-weight: var(--font-weight-regular, 400);
+    line-height: 140%; /* 16.812px */
+  }
+
   .text-body-lg-bold {
     font-family: "Spline Sans", sans-serif;
     font-size: 20px;
@@ -212,6 +232,15 @@
     line-height: 120%;
     font-weight: 700;
     text-transform: uppercase;
+  }
+
+  /*mascot font*/
+  .text-jocky-normal {
+    font-family: var(--font-jocky);
+    font-size: 125.22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 175.308px */
   }
 }
 

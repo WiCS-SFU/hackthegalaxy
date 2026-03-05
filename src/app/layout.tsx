@@ -1,10 +1,17 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Spline_Sans, Oxanium } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FooterCounter from "@/components/FooterCounter";
 import AOSProvider from "@/components/aos-interactions/AOSProvider";
+
+const jockyStarline = localFont({
+  src: "./fonts/JockyStarline.ttf",
+  variable: "--font-jocky",
+  display: "swap",
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -39,7 +46,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${splineSans.variable} ${oxanium.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${splineSans.variable} ${oxanium.variable} ${jockyStarline.variable} antialiased`}
       >
         <AOSProvider />
         <Navbar />
