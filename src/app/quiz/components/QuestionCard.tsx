@@ -1,5 +1,6 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Button from "@/components/ui/buttons/Button";
 import { ArrowDownIcon } from "@heroicons/react/24/outline";
@@ -127,7 +128,7 @@ export default function QuestionCard({
         <div
             className="
             pointer-events-none absolute z-0
-            w-[1600px] h-[1400px]
+            w-[2000px] h-[1600px]
             left-1/2 -translate-x-1/2
             bottom-[-900px]
             rounded-full blur-[110px]
@@ -189,56 +190,62 @@ export default function QuestionCard({
             </div>
 
             {/* Right: question + options */}
-            <div className="flex flex-col">
-            <p className="text-sm tracking-wide text-pink-300">
+            <div className="grid h-full grid-rows-[auto_auto_1fr_auto]">
+            {/* Progress */}
+            <p className="text-accent-lg tracking-wide text-pink-300">
                 {current} of {total}
             </p>
 
-            <p className="mt-4 text-2xl font-semibold leading-tight text-neutral-100">
+            {/* Question */}
+            <p className="mt-4 max-w-[600px] text-heading-lg leading-tight text-neutral-100">
                 {data.question}
             </p>
 
-            {/* Options: ONE COLUMN */}
-            <div className="mt-8 flex w-full flex-col gap-4 max-w-[560px]">
+            {/* Options (fills remaining space) */}
+            <div className="flex min-h-0 items-center">
+                <div className="mt-8 flex w-full max-w-[600px] flex-col gap-4">
                 {data.options.map((option, index) => (
-                <button
+                    <button
                     key={index}
                     type="button"
                     onClick={() => setSelected(index)}
                     className={`
-                    w-full rounded-xl p-5 text-left transition-all
-                    ${selected === index ? "bg-pink-200/30" : "bg-pink-200/15"}
-                    hover:bg-pink-200/25
-                    border border-white/5
+                        w-full rounded-xl p-5 text-left transition-all
+                        min-h-[76px]
+                        ${selected === index ? "bg-pink-200/30" : "bg-pink-200/15"}
+                        hover:bg-pink-200/25
+                        border border-white/5
                     `}
-                >
+                    >
                     <div className="flex items-start gap-3">
-                    <span className="relative mt-0.5 h-5 w-5 shrink-0">
+                        <span className="relative mt-0.5 h-5 w-5 shrink-0">
                         <Image
-                        src={data.option_icons[index]}
-                        alt=""
-                        fill
-                        className="object-contain"
-                        priority
+                            src={data.option_icons[index]}
+                            alt=""
+                            fill
+                            className="object-contain"
+                            priority
                         />
-                    </span>
+                        </span>
 
-                    <span className="text-sm leading-6 text-neutral-100">
+                        <span className="text-body-md leading-6 text-neutral-100 line-clamp-2">
                         {option}
-                    </span>
+                        </span>
                     </div>
-                </button>
+                    </button>
                 ))}
+                </div>
             </div>
 
-            {/* Footer: NEXT centered at bottom like screenshot */}
+            {/* Footer pinned bottom */}
             <div className="mt-auto pt-10 flex items-center gap-4">
                 {canGoBack && (
                 <Button
                     onClick={onBack}
-                    variant="default"
+                    variant="ghost"
                     size="large"
-                    iconPos="none"
+                    iconPos="right"
+                    icon={<ArrowUpIcon className="h-4 w-4 stroke-3" />}
                     className="w-[140px] justify-center"
                 >
                     Back
@@ -247,9 +254,10 @@ export default function QuestionCard({
 
                 <Button
                 onClick={() => onNext(selected ?? 0)}
-                variant="default"
+                variant="ghost"
                 size="large"
-                iconPos="none"
+                iconPos="right"
+                icon={<ArrowDownIcon className="h-4 w-4 stroke-3" />}
                 className="w-[180px] justify-center"
                 disabled={selected === null}
                 >
