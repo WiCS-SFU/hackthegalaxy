@@ -1,8 +1,7 @@
 "use client";
 
 import Image from 'next/image';
-import Button from "@/components/ui/Button";
-import { PlusIcon } from "@heroicons/react/24/solid";
+import Button from "@/components/ui/buttons/Button";
 import { useRouter } from "next/navigation";
 
 export default function Quiz() {

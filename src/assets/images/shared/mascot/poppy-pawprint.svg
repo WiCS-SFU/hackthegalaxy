@@ -1,0 +1,20 @@
+<svg width="178" height="167" viewBox="0 0 178 167" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_g_1290_5884)">
+<path d="M86.1725 69.072C91.3475 67.0787 97.2117 68.971 100.246 73.6132C118.744 101.801 130.947 120.44 125.704 136.685C121.408 150 106.313 156.595 91.3667 151.772C84.5372 149.568 78.0098 142.31 75.1947 134.545C74.3715 132.274 71.3337 131.114 69.3142 132.439C62.8344 136.691 54.4082 139.846 47.6919 137.679C32.7454 132.856 24.3528 118.682 28.6493 105.367C33.8914 89.1216 54.6873 81.1308 86.1725 69.072Z" fill="#F6C7C7"/>
+<ellipse cx="14.5248" cy="18.8935" rx="14.5248" ry="18.8935" transform="matrix(0.972853 0.231424 -0.237744 0.971328 72.5022 13.0586)" fill="#F6C7C7"/>
+<ellipse cx="14.5248" cy="18.8935" rx="14.5248" ry="18.8935" transform="matrix(-0.92463 -0.380868 -0.374848 0.927086 143.447 35.9521)" fill="#F6C7C7"/>
+<ellipse cx="14.5454" cy="18.8689" rx="14.5454" ry="18.8689" transform="matrix(0.993908 0.110211 -0.126444 0.991974 29.0871 32.1484)" fill="#F6C7C7"/>
+<ellipse cx="14.5454" cy="18.8689" rx="14.5454" ry="18.8689" transform="matrix(-0.870863 -0.491526 -0.477224 0.878782 167.516 76.8179)" fill="#F6C7C7"/>
+</g>
+<defs>
+<filter id="filter0_g_1290_5884" x="22.5037" y="12.1113" width="142.883" height="145.236" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feTurbulence type="fractalNoise" baseFrequency="0.021367521956562996 0.021367521956562996" numOctaves="3" seed="3178" />
+<feDisplacementMap in="shape" scale="8" xChannelSelector="R" yChannelSelector="G" result="displacedImage" width="100%" height="100%" />
+<feMerge result="effect1_texture_1290_5884">
+<feMergeNode in="displacedImage"/>
+</feMerge>
+</filter>
+</defs>
+</svg>

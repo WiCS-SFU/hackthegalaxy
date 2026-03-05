@@ -42,7 +42,7 @@ export default function Details() {
     if (!character) return null;
 
     return (
-        <section className="relative min-h-screen bg-neutral-800 pb-30">
+        <section className="relative h-screen overflow-hidden bg-neutral-800 pb-30">
             {/* Black Overlay */}
             <div className="absolute inset-0 bg-black/20 z-1" />
             

@@ -28,7 +28,7 @@ export default function OurTeam() {
           data-aos-once="true"
           data-aos-duration="600"
         >
-        <div className="flex flex-col gap-lg pb-lg">
+        <div className="flex flex-col gap-xl pb-lg">
           <h1 className="text-acc ent-sm text-cyan-400">Meet The Organizers</h1>
           <h2 className="text-heading-lg text-neutral-100">Our Team</h2>
           <p className="text-body-sm text-neutral-100 mb-2xl">
