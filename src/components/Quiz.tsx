@@ -87,7 +87,7 @@ export default function Quiz() {
                 absolute z-0
                 w-[2331px] h-[1935px]
                 left-1/2 -translate-x-1/2
-                right-[-900px] bottom-[-900px]
+                right-[-900px] bottom-[-1000px]
                 rounded-full blur-[54px]
                 pointer-events-none
             "
@@ -114,14 +114,14 @@ export default function Quiz() {
             </div>
 
             {/* Center stack */}
-            <div className="relative z-10 flex flex-col items-center text-center">
-              <div className="mb-2">
+            <div className="relative z-10 mt-20 flex flex-col items-center text-center">
+              <div className="mb-2 mt-10">
                 <Image src="/galactic.svg" alt="Galactic Text" width={587} height={215} priority />
               </div>
 
               <p className="text-display-lg text-neutral-100 -mt-15">persona quiz</p>
 
-              <div className="mt-60">
+              <div className="mt-50">
                 <Button
                   onClick={() => router.push("/quiz")}
                   variant="default"

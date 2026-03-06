@@ -30,7 +30,7 @@ function QuizMobileLayout({ children }: { children: React.ReactNode }) {
       </button>
 
       {/* Full-screen, scrollable content */}
-      <div className="h-full w-full overflow-hidden pt-20">{children}</div>
+      {children}
     </motion.div>
   );
 }

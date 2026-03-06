@@ -35,14 +35,15 @@ export default function QuestionCard({
 
     return (
         <>
-        <section className="relative md:hidden overflow-hidden">
+        <section className="relative h-screen overflow-hidden">
             <div className="absolute z-0 w-[772.06px] h-[772.06px] 
                     left-[-300px] top-[460px]
                     bg-[radial-gradient(ellipse_72.73%_75.28%_at_67.98%_65.87%,_var(--pink-100,_#F7F0FB)_0%,_var(--pink-400,_#BE89E2)_23%,_var(--purple-600,_#4119B8)_47%,_var(--purple-800,_#16064A)_77%,_var(--neutral-800,_#171621)_100%)] 
                     rounded-full blur-[53.84px]"/>
 
-            <div className="relative flex flex-col items-center text-center min-h-screen">
-                <div className="mt-30">
+            <div className="relative flex flex-col items-center text-center h-full">
+                
+                <div className="mt-25">
                     <Image
                         src={data.image}
                         alt="Question Image"
@@ -109,11 +110,12 @@ export default function QuestionCard({
                     )}
                     
                     <Button 
-                        onClick={() => onNext(selected ?? 0)} 
+                        onClick={() => onNext(selected!)} 
                         variant="ghost" 
                         size="large" 
                         iconPos="right"
-                        icon={<ArrowDownIcon className="h-4 w-4 stroke-3" />} 
+                        icon={<ArrowDownIcon className="h-4 w-4 stroke-3" />}
+                        disabled={selected === null}
                         className="justify-center"
                     >
                         {current === total ? "Finish" : "Next"}
