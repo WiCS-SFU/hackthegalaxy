@@ -77,7 +77,7 @@ export default function Results() {
                     rounded-full blur-[53.84px]"/>
             
                 <div className="relative flex flex-col items-center text-center z-10">
-                    <div className="mt-[30vh] mb-6">
+                    <div className="mt-[10vh] mb-6">
                         <video
                             src={character.video}
                             autoPlay

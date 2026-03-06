@@ -53,7 +53,7 @@ export default function Details() {
                     rounded-full blur-[53.84px]"/>
             
                 <div className="relative flex flex-col items-center text-center z-10">
-                    <div className="relative mt-30 px-xl text-left ">
+                    <div className="relative mt-[10vh] px-xl text-left ">
                         <div className="text-display-md mb-3xl">
                             {character.name}
                         </div>
