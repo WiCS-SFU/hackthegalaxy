@@ -6,6 +6,9 @@ import { motion } from "framer-motion";
 import { useRouter, usePathname } from "next/navigation";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import Navbar from "@/components/Navbar";
+import PoppyImg from "@/assets/images/shared/mascot-quiz/poppy-quiz.svg";
+import PiperImg from "@/assets/images/shared/mascot-quiz/piper-quiz.svg";
+import PingImg from "@/assets/images/shared/mascot-quiz/ping-quiz.svg";
 
 function QuizMobileLayout({ children }: { children: React.ReactNode }) {
   const router = useRouter();
@@ -76,7 +79,7 @@ function QuizDesktopLayout({ children }: { children: React.ReactNode }) {
               {/* Duck top-left */}
               <div className="pointer-events-none absolute left-0 top-0 z-0">
                 <Image
-                  src="/duck.png"
+                  src={PiperImg.src}
                   alt="Duck"
                   width={700}
                   height={700}
@@ -100,7 +103,12 @@ function QuizDesktopLayout({ children }: { children: React.ReactNode }) {
                 </div>
 
                 <div className="absolute right-[-80px] bottom-[-40px] z-0 -rotate-12">
-                  <Image src="/dog.png" alt="Dog" width={450} height={450} />
+                  <Image
+                    src={PoppyImg.src}
+                    alt="Dog"
+                    width={450}
+                    height={450}
+                  />
                 </div>
               </div>
             </div>

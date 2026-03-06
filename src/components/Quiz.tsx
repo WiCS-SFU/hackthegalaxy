@@ -1,80 +1,74 @@
 "use client";
 
-import Image from 'next/image';
+import Image from "next/image";
 import Button from "@/components/ui/buttons/Button";
 import { useRouter } from "next/navigation";
+import PoppyImg from "@/assets/images/shared/mascot-quiz/poppy-quiz.svg";
+import PiperImg from "@/assets/images/shared/mascot-quiz/piper-quiz.svg";
+import PingImg from "@/assets/images/shared/mascot-quiz/ping-quiz.svg";
 
 export default function Quiz() {
-    const router = useRouter();
-    return(
-        <>
-        <section className="relative bg-neutral-800 overflow-hidden md:hidden">
-            <div className="w-full text-center">
-                          {/* Background glow (bigger / shifted for desktop) */}
-                <div className="absolute z-0 w-[772.06px] h-[772.06px] left-[-300px] top-[80px] bg-[radial-gradient(ellipse_72.73%_75.28%_at_67.98%_65.87%,_var(--pink-100,_#F7F0FB)_0%,_var(--pink-400,_#BE89E2)_23%,_var(--purple-600,_#4119B8)_47%,_var(--purple-800,_#16064A)_77%,_var(--neutral-800,_#171621)_100%)] rounded-full blur-[53.84px]"/>
+  const router = useRouter();
+  return (
+    <>
+      <section className="relative bg-neutral-800 overflow-hidden md:hidden">
+        <div className="w-full text-center">
+          {/* Background glow (bigger / shifted for desktop) */}
+          <div className="absolute z-0 w-[772.06px] h-[772.06px] left-[-300px] top-[80px] bg-[radial-gradient(ellipse_72.73%_75.28%_at_67.98%_65.87%,_var(--pink-100,_#F7F0FB)_0%,_var(--pink-400,_#BE89E2)_23%,_var(--purple-600,_#4119B8)_47%,_var(--purple-800,_#16064A)_77%,_var(--neutral-800,_#171621)_100%)] rounded-full blur-[53.84px]" />
 
-                <div className="relative flex flex-col items-center text-center">
-                    <div className="absolute top-12 right-4">
-                        <Image
-                            src="/logo.svg"
-                            alt="Small Logo"
-                            width={50}
-                            height={45}
-                            priority
-                        />
-                    </div>
-
-                    <div className="z-10 mt-57">
-                        <Image
-                            src="/galactic.svg"
-                            alt="Galactic Text"
-                            width={340}
-                            height={200}
-                            priority
-                        />
-                    </div>
-                    
-                    <div className="z-10 -mt-6">
-                        <p className="text-neutral-100 text-4xl font-bold">
-                            persona quiz
-                        </p>
-                    </div>
-
-                    <div className="absolute left-[0px]">
-                        <Image
-                            src="/duck.png"
-                            alt="Duck"
-                            width={310}
-                            height={310}
-                        />
-                    </div>
-
-                    <div className="absolute mt-104 left-[-35px] rotate-12">
-                        <Image
-                            src="/panda.svg"
-                            alt="Panda"
-                            width={270}
-                            height={270}
-                        />
-                    </div>
-
-                    <div className="absolute mt-109 right-[-56px] -rotate-20">
-                        <Image
-                            src="/dog.png"
-                            alt="Dog"
-                            width={320}
-                            height={320}
-                        />
-                    </div>
-
-                    <div className="z-10 mt-60 mb-3">
-                            <Button onClick={() => router.push("/quiz")} variant="default" size="large" iconPos="none" className="w-[350px] justify-center">
-                                Take the Quiz
-                            </Button>
-                    </div>
-                </div>
+          <div className="relative flex flex-col items-center text-center">
+            <div className="absolute top-12 right-4">
+              <Image
+                src="/logo.svg"
+                alt="Small Logo"
+                width={50}
+                height={45}
+                priority
+              />
             </div>
-        </section>
+
+            <div className="z-10 mt-57">
+              <Image
+                src="/galactic.svg"
+                alt="Galactic Text"
+                width={340}
+                height={200}
+                priority
+              />
+            </div>
+
+            <div className="z-10 -mt-6">
+              <p className="text-neutral-100 text-4xl font-bold">
+                persona quiz
+              </p>
+            </div>
+
+            <div className="absolute left-[0px]">
+              <Image src={PiperImg.src} alt="Duck" width={310} height={310} />
+            </div>
+
+            <div className="absolute mt-104 left-[-35px] rotate-12">
+              <Image src={PingImg.src} alt="Panda" width={270} height={270} />
+            </div>
+
+            <div className="absolute mt-109 right-[-56px] -rotate-20">
+              <Image src={PoppyImg.src} alt="Dog" width={320} height={320} />
+            </div>
+
+            <div className="z-10 mt-60 mb-3">
+              <Button
+                onClick={() => router.push("/quiz")}
+                variant="default"
+                size="large"
+                iconPos="none"
+                className="w-[350px] justify-center"
+              >
+                Take the Quiz
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* =======================
           DESKTOP (>= md)
@@ -82,7 +76,7 @@ export default function Quiz() {
       <section className="relative hidden overflow-hidden bg-neutral-800 md:block">
         <div className="mx-auto w-full max-w-[1280px] px-6">
           {/* Background glow (bigger / shifted for desktop) */}
-            <div
+          <div
             className="
                 absolute z-0
                 w-[2331px] h-[1935px]
@@ -92,34 +86,48 @@ export default function Quiz() {
                 pointer-events-none
             "
             style={{
-                background:
+              background:
                 "radial-gradient(ellipse 72.73% 75.28% at 67.98% 65.87%, #F7F0FB 0%, #BE89E2 23.07%, #4119B8 46.77%, #16064A 77.15%, #171621 100%)",
             }}
-            />
-        <div className="absolute left-0 top-0 pointer-events-none">
+          />
+          <div className="absolute left-0 top-0 pointer-events-none">
             <Image
-                src="/duck.png"
-                alt="Duck"
-                width={500}
-                height={500}
-                priority
-                className="block w-[500px] h-auto"
+              src={PiperImg.src}
+              alt="Duck"
+              width={500}
+              height={500}
+              priority
+              className="block w-[500px] h-auto"
             />
-            </div>
+          </div>
 
           <div className="relative flex min-h-[720px] items-center justify-center">
             {/* Logo */}
             <div className="absolute right-0 top-8 z-10">
-              <Image src="/logo.svg" alt="Small Logo" width={95} height={88} priority />
+              <Image
+                src="/logo.svg"
+                alt="Small Logo"
+                width={95}
+                height={88}
+                priority
+              />
             </div>
 
             {/* Center stack */}
             <div className="relative z-10 mt-20 flex flex-col items-center text-center">
               <div className="mb-2 mt-10">
-                <Image src="/galactic.svg" alt="Galactic Text" width={587} height={215} priority />
+                <Image
+                  src="/galactic.svg"
+                  alt="Galactic Text"
+                  width={587}
+                  height={215}
+                  priority
+                />
               </div>
 
-              <p className="text-display-lg text-neutral-100 -mt-15">persona quiz</p>
+              <p className="text-display-lg text-neutral-100 -mt-15">
+                persona quiz
+              </p>
 
               <div className="mt-50">
                 <Button
@@ -138,13 +146,12 @@ export default function Quiz() {
             {/* Duck (desktop) */}
 
             <div className="absolute left-[-100px] bottom-[-40px] z-10 rotate-6">
-              <Image src="/panda.svg" alt="Panda" width={350} height={350} />
+              <Image src={PingImg.src} alt="Panda" width={350} height={350} />
             </div>
 
             <div className="absolute right-[-80px] bottom-[-40px] z-10 -rotate-12">
-              <Image src="/dog.png" alt="Dog" width={450} height={450} />
+              <Image src={PoppyImg.src} alt="Dog" width={450} height={450} />
             </div>
-
           </div>
         </div>
       </section>
