@@ -119,7 +119,7 @@ function QuizDesktopLayout({ children }: { children: React.ReactNode }) {
         </div>
 
         {/* Modal */}
-        <div className="absolute inset-0 flex items-stretch justify-center px-6 pb-6 pt-2 min-h-0">
+        <div className="absolute inset-0 flex items-stretch justify-center px-6 pb-6 min-h-0">
           <div className="w-full max-w-[1250px] h-full max-h-[809px] rounded-[24px] border border-pink-200 bg-neutral-800 overflow-hidden shadow-2xl flex flex-col">
             <div className="flex flex-col flex-1 min-h-0 overflow-hidden">
               {children}
