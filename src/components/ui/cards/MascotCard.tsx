@@ -7,6 +7,7 @@ interface MascotProps {
   description: string;
   mascotImg: string;
   pawImg: string;
+  bgImg: string;
   mascotPos: string;
   pawPos: string;
   pawWidth: number;
@@ -20,6 +21,7 @@ function MascotCard({
   description,
   mascotImg,
   pawImg,
+  bgImg,
   mascotPos,
   pawPos,
   pawWidth,
@@ -27,14 +29,22 @@ function MascotCard({
   namePos,
 }: MascotProps) {
   return (
-    <section className="w-full rounded-xl bg-neutral-700 overflow-hidden">
+    <section className="relative w-full rounded-xl bg-neutral-700 overflow-hidden">
+      {/* Star Backgrounds */}
+      <Image
+        src={bgImg}
+        alt={`${name}-bg`}
+        fill
+        className="object-cover pointer-events-none z-0"
+      />
+
       <div className="flex flex-col items-center text-center gap-lg">
-        {/* 1) Name */}
+        {/* Name */}
         <div className={clsx("text-jocky-normal", nameColour, namePos)}>
           {name}
         </div>
 
-        {/* 2) Image block (mascot + paw) — fixed height so all cards match; enough room for paw */}
+        {/* Image block (mascot + paw) */}
         <div className="relative w-[251.427px] flex items-start justify-center">
           <div className="relative w-full h-[220.429px]">
             <Image
@@ -55,7 +65,7 @@ function MascotCard({
           </div>
         </div>
 
-        {/* 3) Description */}
+        {/* Description */}
         <div>
           <p className="w-full text-white text-body-mascot px-3xl pb-[21px]">
             {description}

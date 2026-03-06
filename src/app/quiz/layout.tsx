@@ -29,8 +29,8 @@ function QuizMobileLayout({ children }: { children: React.ReactNode }) {
         <XMarkIcon className="h-10 w-10 stroke-1" />
       </button>
 
-      {/* Full-screen content: scrollable only on questions (not welcome) */}
-      <div className="h-full w-full pt-20 overflow-y-auto">{children}</div>
+      {/* Full-screen, scrollable content */}
+      {children}
     </motion.div>
   );
 }
