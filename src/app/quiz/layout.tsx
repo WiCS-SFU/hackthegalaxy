@@ -3,12 +3,15 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import Navbar from "@/components/Navbar";
 
 function QuizMobileLayout({ children }: { children: React.ReactNode }) {
   const router = useRouter();
+  const pathname = usePathname();
+  const isWelcomeScreen = pathname === "/quiz";
+  const isScrollable = !isWelcomeScreen;
 
   return (
     <motion.div
@@ -29,14 +32,22 @@ function QuizMobileLayout({ children }: { children: React.ReactNode }) {
         <XMarkIcon className="h-10 w-10 stroke-1" />
       </button>
 
-      {/* Full-screen, scrollable content */}
-      <div className="h-full w-full overflow-y-auto pt-20">{children}</div>
+      {/* Full-screen content: scrollable only on questions (not welcome) */}
+      <div
+        className={`h-full w-full pt-20 ${isScrollable ? "overflow-y-auto" : ""}`}
+      >
+        {children}
+      </div>
     </motion.div>
   );
 }
 
 function QuizDesktopLayout({ children }: { children: React.ReactNode }) {
   const router = useRouter();
+  const pathname = usePathname();
+  const isWelcomeScreen = pathname === "/quiz";
+  const isQuestionScreen = pathname?.startsWith("/quiz/questions");
+  const isScrollable = !isWelcomeScreen && !isQuestionScreen;
 
   return (
     <motion.div
@@ -46,16 +57,15 @@ function QuizDesktopLayout({ children }: { children: React.ReactNode }) {
       transition={{ type: "spring", stiffness: 120, damping: 20 }}
       className="fixed inset-0 z-50 bg-neutral-800"
     >
-
-      {/* Navbar always on top */}
-      <div className="absolute inset-x-0 top-0 z-[80]">
+      {/* Navbar always on top, above quiz overlay */}
+      <div className="absolute inset-x-0 top-0 z-[100]">
         <Navbar />
       </div>
 
-      {/* Everything below is offset so it doesn't sit under navbar */}
-      <div className="absolute inset-0 pt-[88px]">
+      {/* Everything below navbar — shrinks with viewport */}
+      <div className="absolute top-[88px] inset-x-0 bottom-0 flex flex-col min-h-0">
         {/* Desktop backdrop + modal */}
-        <div className="hidden md:block h-full">
+        <div className="hidden md:block flex-1 min-h-0">
           {/* Backdrop with bars */}
           <div className="absolute inset-0 flex items-center justify-center bg-black">
             <div className="relative w-full h-[600px] overflow-hidden px-6">
@@ -87,14 +97,17 @@ function QuizDesktopLayout({ children }: { children: React.ReactNode }) {
               </div>
 
               <div className="relative flex min-h-[720px] items-center justify-center">
-
                 {/* Center stack */}
-                <div className="relative z-10 flex flex-col items-center text-center">
-                </div>
+                <div className="relative z-10 flex flex-col items-center text-center"></div>
 
                 {/* Panda + dog */}
                 <div className="absolute left-[-100px] bottom-[-40px] z-0 rotate-6">
-                  <Image src="/panda.svg" alt="Panda" width={350} height={350} />
+                  <Image
+                    src="/panda.svg"
+                    alt="Panda"
+                    width={350}
+                    height={350}
+                  />
                 </div>
 
                 <div className="absolute right-[-80px] bottom-[-40px] z-0 -rotate-12">
@@ -108,18 +121,28 @@ function QuizDesktopLayout({ children }: { children: React.ReactNode }) {
           <div className="absolute inset-0 bg-neutral-950/35" />
         </div>
 
-          {/* Modal */}
-          <div className="absolute inset-0 flex items-center justify-center p-6">
-            <div className="w-full max-w-[1250px] h-[665px] rounded-[24px] border border-pink-200 bg-neutral-800 overflow-hidden shadow-2xl">
-              <div className="h-full w-full">{children}</div>
+        {/* Modal */}
+        <div className="absolute inset-0 flex items-stretch justify-center px-6 pb-6 pt-2 min-h-0">
+          <div className="w-full max-w-[1250px] h-full max-h-[809px] rounded-[24px] border border-pink-200 bg-neutral-800 overflow-hidden shadow-2xl flex flex-col">
+            <div
+              className={`flex flex-col flex-1 min-h-0 ${
+                isScrollable ? "overflow-y-auto" : "overflow-hidden"
+              } ${isWelcomeScreen ? "justify-center items-center" : ""}`}
+            >
+              {children}
             </div>
           </div>
         </div>
+      </div>
     </motion.div>
   );
 }
 
-export default function QuizLayout({ children }: { children: React.ReactNode }) {
+export default function QuizLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <>
       <div className="md:hidden">
