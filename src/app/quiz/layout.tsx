@@ -114,6 +114,42 @@ function QuizDesktopLayout({ children }: { children: React.ReactNode }) {
         <div className="absolute inset-0 flex items-stretch justify-center px-6 pb-6 pt-2 min-h-0">
           <div className="w-full max-w-[1250px] h-full max-h-[809px] rounded-[24px] border border-pink-200 bg-neutral-800 overflow-hidden shadow-2xl flex flex-col">
             <div className="flex flex-col flex-1 min-h-0 overflow-hidden">
+                      {/* Close (X) */}
+                      <button
+                        type="button"
+                        onClick={() => router.push("/")}
+                        aria-label="Close quiz"
+                        className="
+                          absolute right-10 top-6 z-20
+                          rounded-full p-2
+                          text-white/80 hover:text-white
+                          hover:bg-white/10
+                          focus:outline-none focus:ring-2 focus:ring-white/30
+                          "
+                      >
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="block"
+                        >
+                          <path
+                            d="M18 6L6 18"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                          />
+                          <path
+                            d="M6 6L18 18"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                          />
+                        </svg>
+                      </button>
+              
               {children}
             </div>
           </div>
