@@ -87,7 +87,7 @@ export default function Quiz() {
                 absolute z-0
                 w-[2331px] h-[1935px]
                 left-1/2 -translate-x-1/2
-                right-[-900px] bottom-[-1000px]
+                right-[-900px] bottom-[-1100px]
                 rounded-full blur-[54px]
                 pointer-events-none
             "

@@ -44,7 +44,7 @@ export default function QuestionCard({
         />
 
         <div className="relative flex flex-col items-center text-center">
-          <div className="mt-30">
+          <div className="mt-[12vh]">
             <Image
               src={data.image}
               alt="Question Image"
@@ -130,10 +130,10 @@ export default function QuestionCard({
         <div
           className="
             pointer-events-none absolute z-0
-            w-[2000px] h-[1600px]
-            left-1/2 -translate-x-1/2
+            w-[2331px] h-[1935px]
+            left-1/2 -translate-x-1/3
             bottom-[-900px]
-            rounded-full blur-[110px]
+            rounded-full blur-[54]
             "
           style={{
             background:
@@ -178,7 +178,7 @@ export default function QuestionCard({
         </button>
 
         {/* Layout (shrink-wrap content, center as a group) */}
-        <div className="relative z-10 mx-auto flex h-full max-w-[1200px] items-center py-12">
+        <div className="relative z-10 mx-auto flex h-full max-w-[1200px] justify-center items-center py-12">
           <div className="grid w-full grid-cols-[420px_1fr] items-center gap-10">
             {/* Left: big illustration */}
             <div className="relative flex items-center justify-center">
@@ -193,7 +193,7 @@ export default function QuestionCard({
             </div>
 
             {/* Right: question + options + buttons */}
-            <div className="flex flex-col">
+            <div className="flex flex-col pt-[3vh] ">
               {/* Progress */}
               <p className="text-accent-md tracking-wide text-pink-300">
                 {current} of {total}
