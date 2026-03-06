@@ -200,12 +200,12 @@ export default function QuestionCard({
               </p>
 
               {/* Question */}
-              <p className="mt-4 max-w-[600px] text-heading-lg leading-tight text-neutral-100">
+              <p className="mt-4 max-w-[600px] mr-5 text-heading-lg leading-tight text-neutral-100">
                 {data.question}
               </p>
 
               {/* Options */}
-              <div className="mt-8 flex w-full max-w-[600px] flex-col gap-4">
+              <div className="mt-8 pr-5 flex w-full max-w-[600px] flex-col gap-4">
                 {data.options.map((option, index) => (
                   <button
                     key={index}
@@ -230,7 +230,7 @@ export default function QuestionCard({
                         />
                       </span>
 
-                      <span className="text-body-md leading-6 text-neutral-100 line-clamp-2">
+                      <span className="text-body-md leading-6 text-neutral-100 ">
                         {option}
                       </span>
                     </div>
