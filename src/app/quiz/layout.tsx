@@ -9,9 +9,6 @@ import Navbar from "@/components/Navbar";
 
 function QuizMobileLayout({ children }: { children: React.ReactNode }) {
   const router = useRouter();
-  const pathname = usePathname();
-  const isWelcomeScreen = pathname === "/quiz";
-  const isScrollable = !isWelcomeScreen;
 
   return (
     <motion.div
@@ -33,21 +30,13 @@ function QuizMobileLayout({ children }: { children: React.ReactNode }) {
       </button>
 
       {/* Full-screen content: scrollable only on questions (not welcome) */}
-      <div
-        className={`h-full w-full pt-20 ${isScrollable ? "overflow-y-auto" : ""}`}
-      >
-        {children}
-      </div>
+      <div className="h-full w-full pt-20 overflow-y-auto">{children}</div>
     </motion.div>
   );
 }
 
 function QuizDesktopLayout({ children }: { children: React.ReactNode }) {
   const router = useRouter();
-  const pathname = usePathname();
-  const isWelcomeScreen = pathname === "/quiz";
-  const isQuestionScreen = pathname?.startsWith("/quiz/questions");
-  const isScrollable = !isWelcomeScreen && !isQuestionScreen;
 
   return (
     <motion.div
@@ -124,11 +113,7 @@ function QuizDesktopLayout({ children }: { children: React.ReactNode }) {
         {/* Modal */}
         <div className="absolute inset-0 flex items-stretch justify-center px-6 pb-6 pt-2 min-h-0">
           <div className="w-full max-w-[1250px] h-full max-h-[809px] rounded-[24px] border border-pink-200 bg-neutral-800 overflow-hidden shadow-2xl flex flex-col">
-            <div
-              className={`flex flex-col flex-1 min-h-0 ${
-                isScrollable ? "overflow-y-auto" : "overflow-hidden"
-              } ${isWelcomeScreen ? "justify-center items-center" : ""}`}
-            >
+            <div className="flex flex-col flex-1 min-h-0 overflow-hidden">
               {children}
             </div>
           </div>

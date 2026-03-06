@@ -177,34 +177,34 @@ export default function QuestionCard({
           </svg>
         </button>
 
-        {/* Layout */}
-        <div className="relative z-10 mx-auto grid h-full max-w-[1200px] grid-cols-[420px_1fr] gap-10 px-10 py-12">
-          {/* Left: big illustration */}
-          <div className="relative flex items-center justify-center">
-            <Image
-              src={data.image}
-              alt="Question Image"
-              width={250}
-              height={200}
-              priority
-              className="h-auto select-none"
-            />
-          </div>
+        {/* Layout (shrink-wrap content, center as a group) */}
+        <div className="relative z-10 mx-auto flex h-full max-w-[1200px] items-center py-12">
+          <div className="grid w-full grid-cols-[420px_1fr] items-center gap-10">
+            {/* Left: big illustration */}
+            <div className="relative flex items-center justify-center">
+              <Image
+                src={data.image}
+                alt="Question Image"
+                width={250}
+                height={200}
+                priority
+                className="h-auto select-none"
+              />
+            </div>
 
-          {/* Right: question + options */}
-          <div className="grid h-full grid-rows-[auto_auto_1fr_auto]">
-            {/* Progress */}
-            <p className="text-accent-md tracking-wide text-pink-300">
-              {current} of {total}
-            </p>
+            {/* Right: question + options + buttons */}
+            <div className="flex flex-col">
+              {/* Progress */}
+              <p className="text-accent-md tracking-wide text-pink-300">
+                {current} of {total}
+              </p>
 
-            {/* Question */}
-            <p className="mt-4 max-w-[600px] text-heading-lg leading-tight text-neutral-100">
-              {data.question}
-            </p>
+              {/* Question */}
+              <p className="mt-4 max-w-[600px] text-heading-lg leading-tight text-neutral-100">
+                {data.question}
+              </p>
 
-            {/* Options (fills remaining space) */}
-            <div className="flex min-h-0 items-center">
+              {/* Options */}
               <div className="mt-8 flex w-full max-w-[600px] flex-col gap-4">
                 {data.options.map((option, index) => (
                   <button
@@ -212,7 +212,7 @@ export default function QuestionCard({
                     type="button"
                     onClick={() => setSelected(index)}
                     className={`
-                        w-full rounded-xl p-5 text-left transition-all
+                        w-full rounded-xl p-xl text-left transition-all
                         min-h-[76px]
                         ${selected === index ? "bg-pink-200/30" : "bg-pink-200/15"}
                         hover:bg-pink-200/25
@@ -237,34 +237,34 @@ export default function QuestionCard({
                   </button>
                 ))}
               </div>
-            </div>
 
-            {/* Footer pinned bottom */}
-            <div className="mt-auto pt-8 flex items-center gap-4">
-              {canGoBack && (
+              {/* Footer */}
+              <div className="mt-8 flex items-center gap-4">
+                {canGoBack && (
+                  <Button
+                    onClick={onBack}
+                    variant="ghost"
+                    size="large"
+                    iconPos="right"
+                    icon={<ArrowUpIcon className="h-4 w-4 stroke-3" />}
+                    className="w-[140px] justify-center"
+                  >
+                    Back
+                  </Button>
+                )}
+
                 <Button
-                  onClick={onBack}
+                  onClick={() => onNext(selected ?? 0)}
                   variant="ghost"
                   size="large"
                   iconPos="right"
-                  icon={<ArrowUpIcon className="h-4 w-4 stroke-3" />}
-                  className="w-[140px] justify-center"
+                  icon={<ArrowDownIcon className="h-4 w-4 stroke-3" />}
+                  className="w-[180px] justify-center"
+                  disabled={selected === null}
                 >
-                  Back
+                  {current === total ? "Finish" : "Next"}
                 </Button>
-              )}
-
-              <Button
-                onClick={() => onNext(selected ?? 0)}
-                variant="ghost"
-                size="large"
-                iconPos="right"
-                icon={<ArrowDownIcon className="h-4 w-4 stroke-3" />}
-                className="w-[180px] justify-center"
-                disabled={selected === null}
-              >
-                {current === total ? "Finish" : "Next"}
-              </Button>
+              </div>
             </div>
           </div>
         </div>
