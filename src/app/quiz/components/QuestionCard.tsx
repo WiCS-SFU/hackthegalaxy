@@ -144,7 +144,7 @@ export default function QuestionCard({
 
         {/* Layout (shrink-wrap content, center as a group) */}
         <div className="relative z-10 mx-auto flex h-full max-w-[1200px] justify-center items-center py-12">
-          <div className="grid w-full grid-cols-[420px_1fr] items-center gap-10">
+          <div className="grid w-full grid-cols-[minmax(300px,420px)_1fr] items-center gap-10">
             {/* Left: big illustration */}
             <div className="relative flex items-center justify-center">
               <Image
@@ -158,14 +158,14 @@ export default function QuestionCard({
             </div>
 
             {/* Right: question + options + buttons */}
-            <div className="flex flex-col pt-[3vh] ">
+            <div className="flex flex-col pt-[3vh] pr-6">
               {/* Progress */}
               <p className="text-accent-md tracking-wide text-pink-300">
                 {current} of {total}
               </p>
 
               {/* Question */}
-              <p className="mt-3 max-w-[650px] mr-5 text-heading-lg leading-tight text-neutral-100">
+              <p className="mt-3 max-w-[650px] text-heading-lg leading-tight text-neutral-100">
                 {data.question}
               </p>
 

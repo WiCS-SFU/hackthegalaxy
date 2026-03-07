@@ -43,15 +43,15 @@ export default function Quiz() {
               </p>
             </div>
 
-            <div className="absolute left-[0px]">
+            <div className="absolute left-[0px] ">
               <Image src={PiperImg.src} alt="Duck" width={310} height={310} />
             </div>
 
-            <div className="absolute mt-104 left-[-35px] rotate-12">
-              <Image src={PingImg.src} alt="Panda" width={270} height={270} />
+            <div className="absolute mt-104 left-[-55px]">
+              <Image src={PingImg.src} alt="Panda" width={300} height={300} />
             </div>
 
-            <div className="absolute mt-109 right-[-56px] -rotate-20">
+            <div className="absolute mt-106 right-[-56px] -rotate-10">
               <Image src={PoppyImg.src} alt="Dog" width={320} height={320} />
             </div>
 
@@ -81,7 +81,7 @@ export default function Quiz() {
                 absolute z-0
                 w-[2331px] h-[1935px]
                 left-1/2 -translate-x-1/2
-                right-[-900px] bottom-[-1100px]
+                bottom-[-1200px]
                 rounded-full blur-[54px]
                 pointer-events-none
             "
@@ -94,10 +94,10 @@ export default function Quiz() {
             <Image
               src={PiperImg.src}
               alt="Duck"
-              width={500}
-              height={500}
+              width={550}
+              height={550}
               priority
-              className="block w-[500px] h-auto"
+              className="block h-auto"
             />
           </div>
 
@@ -115,7 +115,7 @@ export default function Quiz() {
 
             {/* Center stack */}
             <div className="relative z-10 mt-20 flex flex-col items-center text-center">
-              <div className="mb-2 mt-10">
+              <div className="mb-2 mt-15">
                 <Image
                   src="/galactic.svg"
                   alt="Galactic Text"
@@ -129,7 +129,7 @@ export default function Quiz() {
                 persona quiz
               </p>
 
-              <div className="mt-50">
+              <div className="mt-40">
                 <Button
                   onClick={() => router.push("/quiz")}
                   variant="default"
@@ -145,12 +145,12 @@ export default function Quiz() {
             {/* Characters (desktop positions) */}
             {/* Duck (desktop) */}
 
-            <div className="absolute left-[-100px] bottom-[-40px] z-10 rotate-6">
-              <Image src={PingImg.src} alt="Panda" width={350} height={350} />
+            <div className="absolute left-[-140px] bottom-[0px] z-10">
+              <Image src={PingImg.src} alt="Panda" width={500} height={350} />
             </div>
 
-            <div className="absolute right-[-80px] bottom-[-40px] z-10 -rotate-12">
-              <Image src={PoppyImg.src} alt="Dog" width={450} height={450} />
+            <div className="absolute right-[-80px] bottom-[0px] z-10 ">
+              <Image src={PoppyImg.src} alt="Dog" width={500} height={450} />
             </div>
           </div>
         </div>

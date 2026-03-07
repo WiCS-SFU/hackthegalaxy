@@ -67,7 +67,7 @@ function QuizDesktopLayout({ children }: { children: React.ReactNode }) {
                 className="
                   pointer-events-none absolute z-0
                   w-[2331px] h-[1935px]
-                  right-[-900px] bottom-[-900px]
+                  bottom-[-1200px]
                   rounded-full blur-[54px]
                 "
                 style={{
@@ -93,7 +93,7 @@ function QuizDesktopLayout({ children }: { children: React.ReactNode }) {
                 <div className="relative z-10 flex flex-col items-center text-center"></div>
 
                 {/* Panda + dog */}
-                <div className="absolute left-[-100px] bottom-[-40px] z-0 rotate-6">
+                <div className="absolute left-[30px] bottom-[60px] z-0 rotate-6">
                   <Image
                     src="/panda.svg"
                     alt="Panda"
@@ -102,7 +102,7 @@ function QuizDesktopLayout({ children }: { children: React.ReactNode }) {
                   />
                 </div>
 
-                <div className="absolute right-[-80px] bottom-[-40px] z-0 -rotate-12">
+                <div className="absolute right-[10px] bottom-[100px] z-0 ">
                   <Image
                     src={PoppyImg.src}
                     alt="Dog"
@@ -113,9 +113,6 @@ function QuizDesktopLayout({ children }: { children: React.ReactNode }) {
               </div>
             </div>
           </div>
-
-          {/* Optional: darken the hero a bit so modal pops */}
-          <div className="absolute inset-0"/>
         </div>
 
         {/* Modal */}
