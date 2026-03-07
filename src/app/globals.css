@@ -259,6 +259,63 @@
   background: transparent; /* stars render on top of gradient */
 }
 
+/* Hide stars animation until visible */
+.hero-stars-hidden .hero-stars-layer {
+  animation-play-state: paused;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.1s ease-in, visibility 0.1s ease-in;
+}
+
+/* For quiz pages, make stars appear instantly without transition */
+html:has([data-quiz-page]) .hero-stars-visible .hero-stars-layer,
+body:has([data-quiz-page]) .hero-stars-visible .hero-stars-layer {
+  transition: none;
+}
+
+.hero-stars-hidden .hero-stars-layer-2 {
+  animation-play-state: paused;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.hero-stars-hidden .hero-stars-layer-3 {
+  animation-play-state: paused;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.hero-stars-hidden .hero-stars-layer-2::before {
+  animation-play-state: paused;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.hero-stars-visible .hero-stars-layer {
+  animation-play-state: running;
+  opacity: inherit;
+  visibility: visible;
+  transition: opacity 0.1s ease-in, visibility 0.1s ease-in;
+}
+
+.hero-stars-visible .hero-stars-layer-2 {
+  animation-play-state: running;
+  opacity: inherit;
+  visibility: visible;
+}
+
+.hero-stars-visible .hero-stars-layer-3 {
+  animation-play-state: running;
+  opacity: inherit;
+  visibility: visible;
+}
+
+.hero-stars-visible .hero-stars-layer-2::before {
+  animation-play-state: running;
+  opacity: inherit;
+  visibility: visible;
+}
+
 /* Wrapper for scroll-based parallax transform */
 .hero-stars-scroll-wrapper {
   position: absolute;
@@ -297,6 +354,28 @@
 /* Layer 1 - smallest */
 #stars.hero-stars-layer {
   box-shadow:
+    /* Stars near top (0px) for seamless loop - dense coverage */
+    150px 2px #fff,
+    350px 8px #fff,
+    550px 4px #fff,
+    750px 12px #fff,
+    950px 6px #fff,
+    1150px 16px #fff,
+    1350px 10px #fff,
+    1550px 20px #fff,
+    1750px 14px #fff,
+    1950px 18px #fff,
+    250px 24px #fff,
+    450px 28px #fff,
+    650px 22px #fff,
+    850px 26px #fff,
+    1050px 30px #fff,
+    1250px 1px #fff,
+    1450px 3px #fff,
+    1650px 5px #fff,
+    1850px 7px #fff,
+    2050px 9px #fff,
+    /* Original stars */
     100px 50px #fff,
     320px 180px #fff,
     520px 90px #fff,
@@ -380,11 +459,54 @@
     1980px 380px #fff,
     1350px 150px #fff,
     1750px 520px #fff,
-    1420px 250px #fff;
+    1420px 250px #fff,
+    /* Stars near bottom (2000px) for seamless loop - dense coverage */
+    100px 1970px #fff,
+    300px 1972px #fff,
+    500px 1974px #fff,
+    700px 1976px #fff,
+    900px 1978px #fff,
+    1100px 1980px #fff,
+    1300px 1982px #fff,
+    1500px 1984px #fff,
+    1700px 1986px #fff,
+    1900px 1988px #fff,
+    200px 1990px #fff,
+    400px 1992px #fff,
+    600px 1994px #fff,
+    800px 1996px #fff,
+    1000px 1998px #fff,
+    1200px 1999px #fff,
+    1400px 1997px #fff,
+    1600px 1995px #fff,
+    1800px 1993px #fff,
+    2000px 1991px #fff;
 }
 
 #stars.hero-stars-layer::after {
   box-shadow:
+    /* Stars near top (0px) for seamless loop - dense coverage */
+    150px 2px #fff,
+    350px 8px #fff,
+    550px 4px #fff,
+    750px 12px #fff,
+    950px 6px #fff,
+    1150px 16px #fff,
+    1350px 10px #fff,
+    1550px 20px #fff,
+    1750px 14px #fff,
+    1950px 18px #fff,
+    250px 24px #fff,
+    450px 28px #fff,
+    650px 22px #fff,
+    850px 26px #fff,
+    1050px 30px #fff,
+    1250px 1px #fff,
+    1450px 3px #fff,
+    1650px 5px #fff,
+    1850px 7px #fff,
+    2050px 9px #fff,
+    /* Original stars */
     100px 50px #fff,
     320px 180px #fff,
     520px 90px #fff,
@@ -468,7 +590,28 @@
     1980px 380px #fff,
     1350px 150px #fff,
     1750px 520px #fff,
-    1420px 250px #fff;
+    1420px 250px #fff,
+    /* Stars near bottom (2000px) for seamless loop - dense coverage */
+    100px 1970px #fff,
+    300px 1972px #fff,
+    500px 1974px #fff,
+    700px 1976px #fff,
+    900px 1978px #fff,
+    1100px 1980px #fff,
+    1300px 1982px #fff,
+    1500px 1984px #fff,
+    1700px 1986px #fff,
+    1900px 1988px #fff,
+    200px 1990px #fff,
+    400px 1992px #fff,
+    600px 1994px #fff,
+    800px 1996px #fff,
+    1000px 1998px #fff,
+    1200px 1999px #fff,
+    1400px 1997px #fff,
+    1600px 1995px #fff,
+    1800px 1993px #fff,
+    2000px 1991px #fff;
 }
 
 /* Layer 2 - medium speed */
@@ -485,6 +628,28 @@
 
 #stars2 {
   box-shadow:
+    /* Stars near top (0px) for seamless loop - dense coverage */
+    150px 2px #fff,
+    350px 8px #fff,
+    550px 4px #fff,
+    750px 12px #fff,
+    950px 6px #fff,
+    1150px 16px #fff,
+    1350px 10px #fff,
+    1550px 20px #fff,
+    1750px 14px #fff,
+    1950px 18px #fff,
+    250px 24px #fff,
+    450px 28px #fff,
+    650px 22px #fff,
+    850px 26px #fff,
+    1050px 30px #fff,
+    1250px 1px #fff,
+    1450px 3px #fff,
+    1650px 5px #fff,
+    1850px 7px #fff,
+    2050px 9px #fff,
+    /* Original stars */
     200px 100px #fff,
     450px 280px #fff,
     120px 420px #fff,
@@ -560,7 +725,28 @@
     1920px 280px #fff,
     1550px 150px #fff,
     1780px 480px #fff,
-    1220px 220px #fff;
+    1220px 220px #fff,
+    /* Stars near bottom (2000px) for seamless loop - dense coverage */
+    100px 1970px #fff,
+    300px 1972px #fff,
+    500px 1974px #fff,
+    700px 1976px #fff,
+    900px 1978px #fff,
+    1100px 1980px #fff,
+    1300px 1982px #fff,
+    1500px 1984px #fff,
+    1700px 1986px #fff,
+    1900px 1988px #fff,
+    200px 1990px #fff,
+    400px 1992px #fff,
+    600px 1994px #fff,
+    800px 1996px #fff,
+    1000px 1998px #fff,
+    1200px 1999px #fff,
+    1400px 1997px #fff,
+    1600px 1995px #fff,
+    1800px 1993px #fff,
+    2000px 1991px #fff;
 }
 
 /* Add a few slightly larger stars to layer 2 for variance */
@@ -591,6 +777,28 @@
   width: 1.25px;
   height: 1.25px;
   box-shadow:
+    /* Stars near top (0px) for seamless loop - dense coverage */
+    150px 2px #fff,
+    350px 8px #fff,
+    550px 4px #fff,
+    750px 12px #fff,
+    950px 6px #fff,
+    1150px 16px #fff,
+    1350px 10px #fff,
+    1550px 20px #fff,
+    1750px 14px #fff,
+    1950px 18px #fff,
+    250px 24px #fff,
+    450px 28px #fff,
+    650px 22px #fff,
+    850px 26px #fff,
+    1050px 30px #fff,
+    1250px 1px #fff,
+    1450px 3px #fff,
+    1650px 5px #fff,
+    1850px 7px #fff,
+    2050px 9px #fff,
+    /* Original stars */
     200px 100px #fff,
     450px 280px #fff,
     120px 420px #fff,
@@ -666,7 +874,28 @@
     1920px 280px #fff,
     1550px 150px #fff,
     1780px 480px #fff,
-    1220px 220px #fff;
+    1220px 220px #fff,
+    /* Stars near bottom (2000px) for seamless loop - dense coverage */
+    100px 1970px #fff,
+    300px 1972px #fff,
+    500px 1974px #fff,
+    700px 1976px #fff,
+    900px 1978px #fff,
+    1100px 1980px #fff,
+    1300px 1982px #fff,
+    1500px 1984px #fff,
+    1700px 1986px #fff,
+    1900px 1988px #fff,
+    200px 1990px #fff,
+    400px 1992px #fff,
+    600px 1994px #fff,
+    800px 1996px #fff,
+    1000px 1998px #fff,
+    1200px 1999px #fff,
+    1400px 1997px #fff,
+    1600px 1995px #fff,
+    1800px 1993px #fff,
+    2000px 1991px #fff;
 }
 
 /* Layer 3 - largest */
@@ -683,6 +912,28 @@
 
 #stars3 {
   box-shadow:
+    /* Stars near top (0px) for seamless loop - dense coverage */
+    150px 2px #fff,
+    350px 8px #fff,
+    550px 4px #fff,
+    750px 12px #fff,
+    950px 6px #fff,
+    1150px 16px #fff,
+    1350px 10px #fff,
+    1550px 20px #fff,
+    1750px 14px #fff,
+    1950px 18px #fff,
+    250px 24px #fff,
+    450px 28px #fff,
+    650px 22px #fff,
+    850px 26px #fff,
+    1050px 30px #fff,
+    1250px 1px #fff,
+    1450px 3px #fff,
+    1650px 5px #fff,
+    1850px 7px #fff,
+    2050px 9px #fff,
+    /* Original stars */
     300px 150px #fff,
     550px 350px #fff,
     180px 520px #fff,
@@ -758,13 +1009,56 @@
     1920px 250px #fff,
     1550px 380px #fff,
     1780px 90px #fff,
-    1220px 480px #fff;
+    1220px 480px #fff,
+    /* Stars near bottom (2000px) for seamless loop - dense coverage */
+    100px 1970px #fff,
+    300px 1972px #fff,
+    500px 1974px #fff,
+    700px 1976px #fff,
+    900px 1978px #fff,
+    1100px 1980px #fff,
+    1300px 1982px #fff,
+    1500px 1984px #fff,
+    1700px 1986px #fff,
+    1900px 1988px #fff,
+    200px 1990px #fff,
+    400px 1992px #fff,
+    600px 1994px #fff,
+    800px 1996px #fff,
+    1000px 1998px #fff,
+    1200px 1999px #fff,
+    1400px 1997px #fff,
+    1600px 1995px #fff,
+    1800px 1993px #fff,
+    2000px 1991px #fff;
 }
 
 .hero-stars-layer-3::after {
   width: 1.25px;
   height: 1.25px;
   box-shadow:
+    /* Stars near top (0px) for seamless loop - dense coverage */
+    150px 2px #fff,
+    350px 8px #fff,
+    550px 4px #fff,
+    750px 12px #fff,
+    950px 6px #fff,
+    1150px 16px #fff,
+    1350px 10px #fff,
+    1550px 20px #fff,
+    1750px 14px #fff,
+    1950px 18px #fff,
+    250px 24px #fff,
+    450px 28px #fff,
+    650px 22px #fff,
+    850px 26px #fff,
+    1050px 30px #fff,
+    1250px 1px #fff,
+    1450px 3px #fff,
+    1650px 5px #fff,
+    1850px 7px #fff,
+    2050px 9px #fff,
+    /* Original stars */
     300px 150px #fff,
     550px 350px #fff,
     180px 520px #fff,
@@ -840,15 +1134,36 @@
     1920px 250px #fff,
     1550px 380px #fff,
     1780px 90px #fff,
-    1220px 480px #fff;
+    1220px 480px #fff,
+    /* Stars near bottom (2000px) for seamless loop - dense coverage */
+    100px 1970px #fff,
+    300px 1972px #fff,
+    500px 1974px #fff,
+    700px 1976px #fff,
+    900px 1978px #fff,
+    1100px 1980px #fff,
+    1300px 1982px #fff,
+    1500px 1984px #fff,
+    1700px 1986px #fff,
+    1900px 1988px #fff,
+    200px 1990px #fff,
+    400px 1992px #fff,
+    600px 1994px #fff,
+    800px 1996px #fff,
+    1000px 1998px #fff,
+    1200px 1999px #fff,
+    1400px 1997px #fff,
+    1600px 1995px #fff,
+    1800px 1993px #fff,
+    2000px 1991px #fff;
 }
 
 @keyframes heroAnimStar {
   from {
-    transform: translateY(0);
+    transform: translateY(var(--star-start-offset, 0px));
   }
   to {
-    transform: translateY(-2000px);
+    transform: translateY(calc(var(--star-start-offset, 0px) - 2000px));
   }
 }
 
