@@ -6,6 +6,7 @@ import Button from "@/components/ui/buttons/Button";
 import { ArrowDownIcon } from "@heroicons/react/24/outline";
 import { chaoticOrbit } from "ldrs";
 import { Jockey_One } from "next/font/google";
+import StarParallax from "@/components/ui/effects/StarParallax";
 
 export default function Results() {
   const params = useSearchParams();
@@ -53,6 +54,10 @@ export default function Results() {
                     rounded-full blur-[53.84px]"
         />
 
+        <div className="pointer-events-none absolute inset-0 z-[1]">
+            <StarParallax />
+        </div>
+
         <l-chaotic-orbit size="45" speed="1.5" color="white"></l-chaotic-orbit>
 
         <div className="mt-3 text-accent-lg text-white">Loading...</div>
@@ -73,8 +78,12 @@ export default function Results() {
                     rounded-full blur-[53.84px]"
         />
 
+        <div className="pointer-events-none absolute inset-0 z-[1]">
+            <StarParallax />
+        </div>
+
         <div className="relative flex flex-col items-center text-center z-10 mix-blend-lighten">
-          <div className="mt-[5vh]">
+          <div className="mt-15">
             <video
               src={character.video}
               autoPlay
@@ -84,14 +93,14 @@ export default function Results() {
             ></video>
           </div>
 
-          <div className="-mt-15 text-heading-lg">
+          <div className="-mt-5 text-heading-lg">
             You got{" "}
             <span className="text-jocky-normal text-5xl ml-1">
               {character.name}
             </span>
           </div>
 
-          <div className="z-10 mt-[15vh]">
+          <div className="z-10 mt-[10vh]">
             <Button
               onClick={() => router.push(`/quiz/results/details?type=${type}`)}
               variant="ghost"

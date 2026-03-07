@@ -5,6 +5,7 @@ import Button from "@/components/ui/buttons/Button";
 import { useRouter } from "next/navigation";
 import { PlusIcon } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
+import StarParallax from "@/components/ui/effects/StarParallax";
 
 export default function QuizOverlay() {
   const router = useRouter();
@@ -17,6 +18,10 @@ export default function QuizOverlay() {
                     bg-[radial-gradient(ellipse_72.73%_75.28%_at_67.98%_65.87%,_var(--pink-100,_#F7F0FB)_0%,_var(--pink-400,_#BE89E2)_23%,_var(--purple-600,_#4119B8)_47%,_var(--purple-800,_#16064A)_77%,_var(--neutral-800,_#171621)_100%)] 
                     rounded-full blur-[53.84px]"
         />
+
+        <div className="absolute inset-0 z-[1]">
+            <StarParallax />
+        </div>
 
         <div className="relative flex flex-col items-center text-center">
           <Image

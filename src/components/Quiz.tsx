@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import PoppyImg from "@/assets/images/shared/mascot-quiz/poppy-quiz.svg";
 import PiperImg from "@/assets/images/shared/mascot-quiz/piper-quiz.svg";
 import PingImg from "@/assets/images/shared/mascot-quiz/ping-quiz.svg";
+import StarParallax from "./ui/effects/StarParallax";
 
 export default function Quiz() {
   const router = useRouter();
@@ -15,6 +16,10 @@ export default function Quiz() {
         <div className="w-full text-center">
           {/* Background glow (bigger / shifted for desktop) */}
           <div className="absolute z-0 w-[772.06px] h-[772.06px] left-[-300px] top-[80px] bg-[radial-gradient(ellipse_72.73%_75.28%_at_67.98%_65.87%,_var(--pink-100,_#F7F0FB)_0%,_var(--pink-400,_#BE89E2)_23%,_var(--purple-600,_#4119B8)_47%,_var(--purple-800,_#16064A)_77%,_var(--neutral-800,_#171621)_100%)] rounded-full blur-[53.84px]" />
+
+          <div className="absolute inset-0 z-[1]">
+            <StarParallax />
+          </div>
 
           <div className="relative flex flex-col items-center text-center">
             <div className="absolute top-12 right-4">
@@ -90,6 +95,11 @@ export default function Quiz() {
                 "radial-gradient(ellipse 72.73% 75.28% at 67.98% 65.87%, #F7F0FB 0%, #BE89E2 23.07%, #4119B8 46.77%, #16064A 77.15%, #171621 100%)",
             }}
           />
+
+          <div className="pointer-events-none absolute inset-0 z-[1]">
+              <StarParallax />
+          </div>
+
           <div className="absolute left-0 top-0 pointer-events-none">
             <Image
               src={PiperImg.src}

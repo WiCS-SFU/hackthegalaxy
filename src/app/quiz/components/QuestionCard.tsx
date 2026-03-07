@@ -6,6 +6,7 @@ import Button from "@/components/ui/buttons/Button";
 import { ArrowDownIcon } from "@heroicons/react/24/outline";
 import { ArrowUpIcon } from "@heroicons/react/24/outline";
 import { useState, useEffect } from "react";
+import StarParallax from "@/components/ui/effects/StarParallax";
 
 export default function QuestionCard({
   data,
@@ -42,6 +43,10 @@ export default function QuestionCard({
                     bg-[radial-gradient(ellipse_72.73%_75.28%_at_67.98%_65.87%,_var(--pink-100,_#F7F0FB)_0%,_var(--pink-400,_#BE89E2)_23%,_var(--purple-600,_#4119B8)_47%,_var(--purple-800,_#16064A)_77%,_var(--neutral-800,_#171621)_100%)] 
                     rounded-full blur-[53.84px]"
         />
+
+        <div className="pointer-events-none absolute inset-0 z-[1]">
+            <StarParallax />
+        </div>
 
         <div className="relative flex flex-col items-center text-center h-full">
           <div className="mt-[12vh]">
@@ -141,6 +146,9 @@ export default function QuestionCard({
           }}
         />
 
+        <div className="pointer-events-none absolute inset-0 z-[1]">
+            <StarParallax />
+        </div>
 
         {/* Layout (shrink-wrap content, center as a group) */}
         <div className="relative z-10 mx-auto flex h-full max-w-[1200px] justify-center items-center py-12">
