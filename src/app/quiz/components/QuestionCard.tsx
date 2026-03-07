@@ -35,7 +35,7 @@ export default function QuestionCard({
 
   return (
     <>
-      <section className="relative md:hidden overflow-hidden">
+      <section className="relative h-screen md:hidden overflow-hidden">
         <div
           className="absolute z-0 w-[772.06px] h-[772.06px] 
                     left-[-300px] top-[460px]
@@ -43,7 +43,7 @@ export default function QuestionCard({
                     rounded-full blur-[53.84px]"
         />
 
-        <div className="relative flex flex-col items-center text-center">
+        <div className="relative flex flex-col items-center text-center h-full">
           <div className="mt-[12vh]">
             <Image
               src={data.image}
@@ -141,41 +141,6 @@ export default function QuestionCard({
           }}
         />
 
-        {/* Close (X) */}
-        <button
-          type="button"
-          onClick={() => router.push("/")}
-          aria-label="Close quiz"
-          className="
-            absolute right-6 top-6 z-20
-            rounded-full p-2
-            text-white/80 hover:text-white
-            hover:bg-white/10
-            focus:outline-none focus:ring-2 focus:ring-white/30
-            "
-        >
-          <svg
-            width="18"
-            height="18"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="block"
-          >
-            <path
-              d="M18 6L6 18"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-            <path
-              d="M6 6L18 18"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-          </svg>
-        </button>
 
         {/* Layout (shrink-wrap content, center as a group) */}
         <div className="relative z-10 mx-auto flex h-full max-w-[1200px] justify-center items-center py-12">
