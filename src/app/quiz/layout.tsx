@@ -120,7 +120,7 @@ function QuizDesktopLayout({ children }: { children: React.ReactNode }) {
 
         {/* Modal */}
         <div className="absolute inset-0 flex items-stretch justify-center px-6 pb-6 min-h-0">
-          <div className="w-full max-w-[1250px] h-full max-h-[809px] rounded-[24px] border border-pink-200 bg-neutral-800 overflow-hidden shadow-2xl flex flex-col">
+          <div className="relative w-full max-w-[1250px] h-full max-h-[809px] rounded-[24px] border border-pink-200 bg-neutral-800 overflow-hidden shadow-2xl flex flex-col">
             <div className="flex flex-col flex-1 min-h-0 overflow-hidden">
                       {/* Close (X) */}
                       <button
@@ -128,7 +128,7 @@ function QuizDesktopLayout({ children }: { children: React.ReactNode }) {
                         onClick={() => router.push("/")}
                         aria-label="Close quiz"
                         className="
-                          absolute right-10 top-6 z-20
+                          absolute right-7 top-5 z-20
                           rounded-full p-2
                           text-white/80 hover:text-white
                           hover:bg-white/10
