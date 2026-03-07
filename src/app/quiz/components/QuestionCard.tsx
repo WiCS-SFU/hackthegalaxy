@@ -48,34 +48,34 @@ export default function QuestionCard({
             <StarParallax />
         </div>
 
-        <div className="relative flex flex-col items-center text-center h-full">
-          <div className="mt-[12vh]">
+       <div className="relative flex min-h-full flex-col items-center text-center">
+          <div className="mt-11">
             <Image
               src={data.image}
               alt="Question Image"
-              width={115}
-              height={45}
+              width={95}
+              height={30}
               priority
             />
           </div>
 
-          <div className="mt-4">
+          <div className="mt-2">
             <p className="text-accent-sm text-pink-300">
               {current} of {total}
             </p>
           </div>
 
-          <div className="mt-1 mb-2xl px-xl">
+          <div className="mt-1 mb-2 px-xl">
             <p className="text-heading-md">{data.question}</p>
           </div>
 
           {/* Options */}
-          <div className="grid grid-cols-1 w-full gap-xl px-xl">
+          <div className="grid grid-cols-1 w-full gap-[11px] px-[11px]">
             {data.options.map((option, index) => (
               <div
                 key={index}
                 onClick={() => setSelected(index)}
-                className={`p-xl w-full rounded-md cursor-pointer transition-all 
+                className={`p-xl rounded-md cursor-pointer transition-all max-w-[400px] w-full
                         ${
                           selected === index
                             ? "bg-pink-200/35"
@@ -83,7 +83,7 @@ export default function QuestionCard({
                         }
                     `}
               >
-                <div className="flex items-start gap-2.5">
+                <div className="flex items-start gap-2">
                   <div className="w-5 h-5 relative">
                     <Image
                       src={data.option_icons[index]}
@@ -93,7 +93,7 @@ export default function QuestionCard({
                       priority
                     />
                   </div>
-                  <p className="flex-1 text-neutral-100 text-body-sm text-left leading-5">
+                  <p className="flex-1 text-neutral-100 text-body-sm text-left leading-[1.4]">
                     {option}
                   </p>
                 </div>
@@ -101,7 +101,7 @@ export default function QuestionCard({
             ))}
           </div>
 
-          <div className="z-10 mt-auto mb-8 flex gap-12">
+          <div className="z-10 mt-1 mb-3 flex gap-12">
             {current > 1 && (
               <Button
                 onClick={onBack}
