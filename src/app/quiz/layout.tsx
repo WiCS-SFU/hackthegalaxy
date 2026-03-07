@@ -59,7 +59,7 @@ function QuizDesktopLayout({ children }: { children: React.ReactNode }) {
         {/* Desktop backdrop + modal */}
         <div className="hidden md:block flex-1 min-h-0">
           {/* Backdrop with bars */}
-          <div className="absolute inset-0 flex items-center justify-center bg-black">
+          <div className="absolute inset-0 flex items-center justify-center bg-neutral-800">
             <div className="relative w-full h-[600px] overflow-hidden px-6">
               {/* ... your glow/duck/hero visuals here ... */}
               {/* Glow — anchor to bottom-right OR bottom-center (choose one) */}
@@ -115,7 +115,7 @@ function QuizDesktopLayout({ children }: { children: React.ReactNode }) {
           </div>
 
           {/* Optional: darken the hero a bit so modal pops */}
-          <div className="absolute inset-0 bg-neutral-950/35" />
+          <div className="absolute inset-0"/>
         </div>
 
         {/* Modal */}
@@ -157,7 +157,6 @@ function QuizDesktopLayout({ children }: { children: React.ReactNode }) {
                           />
                         </svg>
                       </button>
-              
               {children}
             </div>
           </div>
