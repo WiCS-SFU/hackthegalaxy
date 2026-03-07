@@ -17,7 +17,7 @@ export const questions = [
 
     {
         id: 2,
-        image: "/catsign.png",
+        image: "/catsign.svg",
         question: "Your team is picking a project name. What is your contribution?",
         options: [
             "It has to be a pun. If the name doesn't make the judges laugh or cringe, we’ve already lost the battle.",
@@ -113,7 +113,7 @@ export const questions = [
 
     {
         id: 8,
-        image: "/catsign.png",
+        image: "/catsign.svg",
         question: "It’s 7:00 PM. Submission is in 2 hours. You are...",
         options: [
             "Moving in double-time, finishing the last feature with laser-focus.",
