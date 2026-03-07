@@ -35,7 +35,7 @@ export default function QuestionCard({
 
   return (
     <>
-      <section className="relative md:hidden overflow-hidden">
+      <section className="relative h-screen md:hidden overflow-hidden">
         <div
           className="absolute z-0 w-[772.06px] h-[772.06px] 
                     left-[-300px] top-[460px]
@@ -43,7 +43,7 @@ export default function QuestionCard({
                     rounded-full blur-[53.84px]"
         />
 
-        <div className="relative flex flex-col items-center text-center">
+        <div className="relative flex flex-col items-center text-center h-full">
           <div className="mt-[12vh]">
             <Image
               src={data.image}
