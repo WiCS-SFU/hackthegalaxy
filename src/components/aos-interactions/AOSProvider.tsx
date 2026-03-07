@@ -18,13 +18,13 @@ export default function AOSProvider() {
       throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
 
       // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-      offset: 120, // offset (in px) from the original trigger point
+      offset: -100, // offset (in px) from the original trigger point - negative value triggers earlier
       delay: 0, // values from 0 to 3000, with step 50ms
       duration: 400, // values from 0 to 3000, with step 50ms
       easing: "ease", // default easing for AOS animations
       once: false, // whether animation should happen only once - while scrolling down
       mirror: false, // whether elements should animate out while scrolling past them
-      anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
+      anchorPlacement: "top-center", // defines which position of the element regarding to window should trigger the animation - triggers when element is closer to viewport
     });
 
     // Re-scan DOM after React has finished rendering so all sections (including
