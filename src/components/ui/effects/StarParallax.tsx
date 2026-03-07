@@ -49,35 +49,15 @@ export default function StarParallax() {
 
     let observer: IntersectionObserver | null = null;
 
-    // For quiz pages or fixed overlays, start immediately with stars distributed
+    // For quiz pages or fixed overlays, start immediately
     if (isQuizPage || isFixedOverlay) {
       setIsVisible(true);
-      // Set animation delay to random positions so stars appear distributed immediately
-      const layers = container.querySelectorAll('.hero-stars-layer');
-      layers.forEach((layer) => {
-        // Set a random starting offset so stars appear distributed
-        const randomOffset = -(Math.random() * 2000);
-        (layer as HTMLElement).style.setProperty('--star-start-offset', `${randomOffset}px`);
-        // Also use animation delay for additional randomization
-        const animationOffset = Math.random() * 2000;
-        (layer as HTMLElement).style.animationDelay = `-${animationOffset}ms`;
-      });
     } else {
       // Check if already visible on mount (for hero section at top of page)
       const rect = targetElement.getBoundingClientRect();
       const isInViewport = rect.top < window.innerHeight + 300 && rect.bottom > -300;
       if (isInViewport) {
         setIsVisible(true);
-        // For sections already in viewport, distribute stars immediately
-        const layers = container.querySelectorAll('.hero-stars-layer');
-        layers.forEach((layer) => {
-          // Set a random starting offset so stars appear distributed
-          const randomOffset = -(Math.random() * 2000);
-          (layer as HTMLElement).style.setProperty('--star-start-offset', `${randomOffset}px`);
-          // Also use animation delay for additional randomization
-          const animationOffset = Math.random() * 2000;
-          (layer as HTMLElement).style.animationDelay = `-${animationOffset}ms`;
-        });
       }
 
       // Intersection Observer to detect when stars enter viewport
@@ -87,18 +67,6 @@ export default function StarParallax() {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
               setIsVisible(true);
-              // When section becomes visible, distribute stars immediately
-              // so they don't all start from the bottom
-              const layers = container.querySelectorAll('.hero-stars-layer');
-              layers.forEach((layer) => {
-                // Set a random starting offset so stars appear distributed across viewport
-                // This positions stars immediately instead of waiting for them to scroll up
-                const randomOffset = -(Math.random() * 2000); // Random between -2000px and 0px
-                (layer as HTMLElement).style.setProperty('--star-start-offset', `${randomOffset}px`);
-                // Also use animation delay for additional randomization
-                const animationOffset = Math.random() * 2000;
-                (layer as HTMLElement).style.animationDelay = `-${animationOffset}ms`;
-              });
             }
           });
         },
