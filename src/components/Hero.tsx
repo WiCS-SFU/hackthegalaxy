@@ -105,17 +105,18 @@ export default function Hero() {
           </div>
 
           <div className="relative z-10 overflow-hidden max-w-[393px] w-full mx-auto px-lg flex flex-col text-center">
-            <div className="mt-16 mb-3xl flex justify-center">
+            <div className="mt-14 mb-3xl flex justify-center">
               <Image
                 src="/hack-the-galaxy-logo.svg"
                 alt="Hack the Galaxy logo"
                 width={340}
                 height={100}
+                className="relative h-[110px]"
                 priority
               />
             </div>
 
-            <div className="py-3xl mb-3xl">
+            <div className="pb-[64px]">
               <p className="text-heading-sm mb-lg">
                 Where creativity takes orbit.
               </p>
