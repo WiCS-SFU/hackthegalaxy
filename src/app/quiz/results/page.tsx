@@ -74,24 +74,24 @@ export default function Results() {
         />
 
         <div className="relative flex flex-col items-center text-center z-10 mix-blend-lighten">
-          <div className="mt-[10vh] mb-6">
+          <div className="mt-[5vh]">
             <video
               src={character.video}
               autoPlay
               loop
               playsInline
-              className="w-[275px] h-auto"
+              className="w-[380px] h-auto"
             ></video>
           </div>
 
-          <div className="text-heading-lg">
+          <div className="-mt-15 text-heading-lg">
             You got{" "}
             <span className="text-jocky-normal text-5xl ml-1">
               {character.name}
             </span>
           </div>
 
-          <div className="z-10 mt-25">
+          <div className="z-10 mt-[15vh]">
             <Button
               onClick={() => router.push(`/quiz/results/details?type=${type}`)}
               variant="ghost"

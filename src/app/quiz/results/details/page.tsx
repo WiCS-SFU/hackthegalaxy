@@ -10,7 +10,7 @@ export default function Details() {
     const characters = {
     piper: {
         name: "Piper",
-        video: "/piper.mp4",
+        video: "/mascot-videos/piper.mp4",
         description:
         `You believe anything is possible — you just haven't found the right API yet.
         \nYour bag defies physics: a USB drive for every occasion, a portable soldering iron nobody expected but everyone eventually needed, and a stash of genuinely good tea that you absolutely planned ahead for.
@@ -19,7 +19,7 @@ export default function Details() {
     },
     ping: {
         name: "Ping",
-        video: "/ping.mp4",
+        video: "/mascot-videos/ping.mp4",
         description: 
         `You have an almost supernatural sense for when things are about to get good. The pizza notification hasn't gone off yet and you're already in line.
         \nMost people grab a sticker from a sponsor booth and move on; you walk away with the limited-edition shirt after an interesting 20 minute conversation about cloud infrastructure.
@@ -28,7 +28,7 @@ export default function Details() {
     },
     poppy: {
         name: "Poppy",
-        video: "/poppy.mp4",
+        video: "/mascot-videos/poppy.mp4",
         description: 
         `You show up to every pre-hackathon workshop — not always because you need the tool, but because knowledge is currency and the presenter is probably worth connected with on LinkedIn.
         \nWhen it comes to the build, you have standards. A flashy UI with shaky logic makes you uncomfortable. You'd rather have something airtight than something pretty that falls apart under one good question from a judge. 
@@ -52,8 +52,8 @@ export default function Details() {
                     bg-[radial-gradient(ellipse_72.73%_75.28%_at_67.98%_65.87%,_var(--pink-100,_#F7F0FB)_0%,_var(--pink-400,_#BE89E2)_23%,_var(--purple-600,_#4119B8)_47%,_var(--purple-800,_#16064A)_77%,_var(--neutral-800,_#171621)_100%)] 
                     rounded-full blur-[53.84px]"/>
             
-                <div className="relative flex flex-col items-center text-center z-10">
-                    <div className="relative mt-[10vh] px-2xl text-left ">
+                <div className="relative flex flex-col items-center text-center z-10 mix-blend-lighten">
+                    <div className="relative mt-[10vh] px-2xl text-left">
                         <div className="text-display-md mb-3xl">
                             {character.name}
                         </div>
@@ -62,13 +62,13 @@ export default function Details() {
                             {character.description}
                         </div>
 
-                        <div className="mt-25 flex justify-center">
+                        <div className="mt-[2vh] flex justify-center">
                             <video
                                 src={character.video}
                                 autoPlay
                                 loop
                                 playsInline
-                                className="w-[130px] h-auto"
+                                className="w-[250px] h-auto"
                             ></video>
                         </div>
                     </div>
