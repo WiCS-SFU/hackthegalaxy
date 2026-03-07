@@ -1,19 +1,19 @@
 import HeadshotCard from "./ui/cards/HeadshotCard";
 import CosmosHeadshot from "@/assets/images/shared/Cosmos_Headshot.png";
-import JenniferHeadshot from "@/assets/images/shared/Jennifer.png";
-import SydneyHeadshot from "@/assets/images/shared/Sydney.png";
-import MaraHeadshot from "@/assets/images/shared/Mara.png";
-import AnHeadshot from "@/assets/images/shared/An.png";
-import TinaHeadshot from "@/assets/images/shared/Tina.png";
-import SerenaHeadshot from "@/assets/images/shared/Serena.png";
-import MeyerHeadshot from "@/assets/images/shared/Meyer.png";
-import LaraibHeadshot from "@/assets/images/shared/Laraib.png";
-import FeliciaHeadshot from "@/assets/images/shared/Felicia.png";
-import ChhayaHeadshot from "@/assets/images/shared/Chhaya.png";
-import JuliaHeadshot from "@/assets/images/shared/Julia.png";
-import BiancaHeadshot from "@/assets/images/shared/Bianca.png";
-import EmilyHeadshot from "@/assets/images/shared/Emily.png";
-import AudreyHeadshot from "@/assets/images/shared/Audrey.png";
+import JenniferHeadshot from "@/assets/images/shared//headshot/Jennifer.png";
+import SydneyHeadshot from "@/assets/images/shared/headshot/Sydney.png";
+import MaraHeadshot from "@/assets/images/shared/headshot/Mara.png";
+import AnHeadshot from "@/assets/images/shared/headshot/An.png";
+import TinaHeadshot from "@/assets/images/shared/headshot/Tina.png";
+import SerenaHeadshot from "@/assets/images/shared/headshot/Serena.png";
+import MeyerHeadshot from "@/assets/images/shared/headshot/Meyer.png";
+import LaraibHeadshot from "@/assets/images/shared/headshot/Laraib.png";
+import FeliciaHeadshot from "@/assets/images/shared/headshot/Felicia.png";
+import ChhayaHeadshot from "@/assets/images/shared/headshot/Chhaya.png";
+import JuliaHeadshot from "@/assets/images/shared/headshot/Julia.png";
+import BiancaHeadshot from "@/assets/images/shared/headshot/Bianca.png";
+import EmilyHeadshot from "@/assets/images/shared/headshot/Emily.png";
+import AudreyHeadshot from "@/assets/images/shared/headshot/Audrey.png";
 
 export default function OurTeam() {
   return (
