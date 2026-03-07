@@ -12,7 +12,12 @@ export default function Quiz() {
   const router = useRouter();
   return (
     <>
-      <section className="relative bg-neutral-800 overflow-hidden md:hidden">
+      <section className="relative bg-neutral-800 overflow-hidden md:hidden"
+        data-aos="fade-up"
+        data-aos-offset="-100"
+        data-aos-anchor-placement="top-center"
+        data-aos-once="true"
+        data-aos-duration="600">
         <div className="w-full text-center">
           {/* Background glow (bigger / shifted for desktop) */}
           <div className="absolute z-0 w-[772.06px] h-[772.06px] left-[-300px] top-[80px] bg-[radial-gradient(ellipse_72.73%_75.28%_at_67.98%_65.87%,_var(--pink-100,_#F7F0FB)_0%,_var(--pink-400,_#BE89E2)_23%,_var(--purple-600,_#4119B8)_47%,_var(--purple-800,_#16064A)_77%,_var(--neutral-800,_#171621)_100%)] rounded-full blur-[53.84px]" />
@@ -78,7 +83,12 @@ export default function Quiz() {
       {/* =======================
           DESKTOP (>= md)
          ======================= */}
-      <section className="relative hidden overflow-hidden bg-neutral-800 md:block">
+      <section className="relative hidden overflow-hidden bg-neutral-800 md:block"
+        data-aos="fade-up"
+        data-aos-offset="-100"
+        data-aos-anchor-placement="top-center"
+        data-aos-once="true"
+        data-aos-duration="600">
         <div className="mx-auto w-full max-w-[1280px] px-6">
           {/* Background glow (bigger / shifted for desktop) */}
           <div
