@@ -6,7 +6,7 @@ export default function About() {
       id="about"
       className="bg-neutral-800 flex flex-col w-full"
       data-aos="fade-up"
-      data-aos-offset="50"
+      data-aos-offset="-100"
       data-aos-anchor-placement="top-center"
       data-aos-once="true"
       data-aos-duration="600"
@@ -53,7 +53,12 @@ export default function About() {
         </div>
 
         {/* Who We Are (mobile) */}
-        <div className="bg-neutral-800 py-3xl px-xl flex justify-center">
+        <div className="bg-neutral-800 py-3xl px-xl flex justify-center"
+          data-aos="fade-up"
+          data-aos-offset="-100"
+          data-aos-anchor-placement="top-center"
+          data-aos-once="true"
+          data-aos-duration="600">
           <div className="w-full">
             <span className="text-accent-sm text-cyan-400 uppercase tracking-widest">
               Who We Are
@@ -221,7 +226,12 @@ export default function About() {
         </div>
 
         {/* Who We Are (desktop version, not shared) */}
-        <div className="bg-neutral-800">
+        <div className="bg-neutral-800"
+          data-aos="fade-up"
+          data-aos-offset="-100"
+          data-aos-anchor-placement="top-center"
+          data-aos-once="true"
+          data-aos-duration="600">
           <div className="mx-auto w-full max-w-[1280px] px-6 py-12">
             <div className="flex flex-col items-start text-left">
               <span className="text-accent-sm text-cyan-400 uppercase tracking-widest">

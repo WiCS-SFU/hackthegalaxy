@@ -5,7 +5,7 @@ export default function Sponsors() {
     <section id="sponsors" className="w-full bg-neutral-800">
       <div className="mx-auto w-full max-w-[1280px] bg-neutral-800 py-3xl px-2xl flex flex-col"
         data-aos="fade-up"
-        data-aos-offset="50"
+        data-aos-offset="-100"
         data-aos-anchor-placement="top-center"
         data-aos-once="true"
         data-aos-duration="600"

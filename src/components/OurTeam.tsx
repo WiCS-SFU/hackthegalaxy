@@ -22,7 +22,7 @@ export default function OurTeam() {
         <div
           className="px-2xl mb-3xl"
           data-aos="fade-up"
-          data-aos-offset="50"
+          data-aos-offset="-100"
           data-aos-anchor-placement="top-center"
           data-aos-once="true"
           data-aos-duration="600"

@@ -1,10 +1,20 @@
 import Link from "next/link";
 import Image from "next/image";
 import StarParallax from "./ui/effects/StarParallax";
+import Button from "./ui/buttons/Button";
 
 export default function Hero() {
   return (
-    <div id="hero" className="bg-neutral-800 px-lg pb-2xl">
+    <>
+      <style dangerouslySetInnerHTML={{__html: `
+        #hero .hero-stars-scroll-wrapper[data-layer="1"] {
+          transform: translateY(-120px) !important;
+        }
+        #hero .hero-stars-scroll-wrapper[data-layer="3"] {
+          transform: translateY(-120px) !important;
+        }
+      `}} />
+      <div id="hero" className="bg-neutral-800 px-lg pb-2xl">
       {/* DESKTOP HERO */}
       <div className="hidden md:block">
         {/* OUTER CONTENT CONTAINER (page gutters) */}
@@ -35,18 +45,19 @@ export default function Hero() {
             {/* INNER CONTENT CONTAINER (logo + text + meta) */}
             <div className="relative z-10 flex flex-col items-start pl-12">
               {/* Logo */}
-              <div className="w-[663px] h-[240px]">
+              <div>
                 <Image
                   src="/hack-the-galaxy-logo.svg"
                   alt="Hack the Galaxy logo"
                   width={663}
-                  height={240}
+                  height={200}
+                  className="relative h-[200px] left-[-24px] mt-[-48px]"
                   priority
                 />
               </div>
 
               {/* HERO TEXT GROUP (this is the new container) */}
-              <div className="flex flex-col gap-2 mt-8 mb-8 pl-12">
+              <div className="flex flex-col gap-1 mt-8 mb-8 pl-12">
                 {/* Tagline */}
                 <p className="text-heading-md">Where creativity takes orbit.</p>
 
@@ -57,21 +68,29 @@ export default function Hero() {
               </div>
 
               {/* Date + Location */}
-              <div className="flex flex-col gap-1 pl-12">
+              <div className="flex flex-col pl-12">
                 <p className="text-body-lg">March 14, 2026</p>
                 <p className="text-body-lg">SFU Burnaby Campus</p>
               </div>
 
               {/* CTA */}
               <div className="mt-6 pl-12">
-                <button className="inline-flex items-center justify-center px-5 py-2 rounded-md border border-pink-100 hover:scale-105 transition-transform">
+                {/* <button className="inline-flex items-center justify-center px-5 py-2 rounded-md border border-pink-100 hover:scale-105 transition-transform">
                   <Link
                     href="https://events.mlh.io/events/13601-hack-the-galaxy"
                     className="text-pink-100 text-accent-lg uppercase tracking-wider"
                   >
                     Apply Now
                   </Link>
-                </button>
+                </button> */}
+                <Link
+                    href="https://events.mlh.io/events/13601-hack-the-galaxy"
+                    className="text-pink-100 text-accent-lg uppercase tracking-wider"
+                  >
+                  <Button variant="outline" size="large">
+                    Apply Now
+                  </Button>
+                </Link>
               </div>
             </div>
           </section>
@@ -80,7 +99,7 @@ export default function Hero() {
 
       {/* MOBILE HERO */}
       <div className="md:hidden">
-        <section className="relative w-full overflow-hidden rounded-3xl pt-[15vh] pb-10 text-white h-[97vh]">
+        <section className="relative w-full overflow-hidden rounded-3xl pt-[15vh] pb-10 text-white h-[97svh]">
           {/* Background glow */}
           <div
             className="absolute z-0 w-[935.67px] h-[935.67px]
@@ -95,17 +114,18 @@ export default function Hero() {
           </div>
 
           <div className="relative z-10 overflow-hidden max-w-[393px] w-full mx-auto px-lg flex flex-col text-center">
-            <div className="mt-16 mb-3xl flex justify-center">
+            <div className="mt-14 mb-3xl flex justify-center">
               <Image
                 src="/hack-the-galaxy-logo.svg"
                 alt="Hack the Galaxy logo"
                 width={340}
                 height={100}
+                className="relative h-[110px]"
                 priority
               />
             </div>
 
-            <div className="py-3xl mb-3xl">
+            <div className="pb-[64px]">
               <p className="text-heading-sm mb-lg">
                 Where creativity takes orbit.
               </p>
@@ -133,5 +153,6 @@ export default function Hero() {
         </section>
       </div>
     </div>
+    </>
   );
 }

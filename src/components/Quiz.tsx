@@ -12,7 +12,21 @@ export default function Quiz() {
   const router = useRouter();
   return (
     <>
-      <section className="relative bg-neutral-800 overflow-hidden md:hidden">
+      <style dangerouslySetInnerHTML={{__html: `
+        [data-quiz-section="true"] .hero-stars-scroll-wrapper[data-layer="1"] {
+          transform: translateY(-300px) !important;
+        }
+        [data-quiz-section="true"] .hero-stars-scroll-wrapper[data-layer="3"] {
+          transform: translateY(-300px) !important;
+        }
+      `}} />
+      <section className="relative bg-neutral-800 overflow-hidden md:hidden"
+        data-quiz-section="true"
+        data-aos="fade-up"
+        data-aos-offset="-100"
+        data-aos-anchor-placement="top-center"
+        data-aos-once="true"
+        data-aos-duration="600">
         <div className="w-full text-center">
           {/* Background glow (bigger / shifted for desktop) */}
           <div className="absolute z-0 w-[772.06px] h-[772.06px] left-[-300px] top-[80px] bg-[radial-gradient(ellipse_72.73%_75.28%_at_67.98%_65.87%,_var(--pink-100,_#F7F0FB)_0%,_var(--pink-400,_#BE89E2)_23%,_var(--purple-600,_#4119B8)_47%,_var(--purple-800,_#16064A)_77%,_var(--neutral-800,_#171621)_100%)] rounded-full blur-[53.84px]" />
@@ -78,7 +92,13 @@ export default function Quiz() {
       {/* =======================
           DESKTOP (>= md)
          ======================= */}
-      <section className="relative hidden overflow-hidden bg-neutral-800 md:block">
+      <section className="relative hidden overflow-hidden bg-neutral-800 md:block"
+        data-quiz-section="true"
+        data-aos="fade-up"
+        data-aos-offset="-100"
+        data-aos-anchor-placement="top-center"
+        data-aos-once="true"
+        data-aos-duration="600">
         <div className="mx-auto w-full max-w-[1280px] px-6">
           {/* Background glow (bigger / shifted for desktop) */}
           <div
@@ -95,11 +115,9 @@ export default function Quiz() {
                 "radial-gradient(ellipse 72.73% 75.28% at 67.98% 65.87%, #F7F0FB 0%, #BE89E2 23.07%, #4119B8 46.77%, #16064A 77.15%, #171621 100%)",
             }}
           />
-
           <div className="pointer-events-none absolute inset-0 z-[1]">
-              <StarParallax />
+            <StarParallax />
           </div>
-
           <div className="absolute left-0 top-0 pointer-events-none">
             <Image
               src={PiperImg.src}
