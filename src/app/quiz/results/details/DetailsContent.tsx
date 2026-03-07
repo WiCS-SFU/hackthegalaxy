@@ -53,22 +53,22 @@ export default function Details() {
                     rounded-full blur-[53.84px]"/>
             
                 <div className="relative flex flex-col items-center text-center z-10 mix-blend-lighten">
-                    <div className="relative mt-[10vh] px-2xl text-left">
-                        <div className="text-display-md mb-3xl">
+                    <div className="relative mt-[10vh] px-[10px] text-left">
+                        <div className="text-display-md mb-xl">
                             {character.name}
                         </div>
 
-                        <div className="text-body-sm whitespace-pre-line">
+                        <div className="text-body-sm leading-tight mt-1 whitespace-pre-line">
                             {character.description}
                         </div>
 
-                        <div className="mt-[2vh] flex justify-center">
+                        <div className="mt-2 flex justify-center">
                             <video
                                 src={character.video}
                                 autoPlay
                                 loop
                                 playsInline
-                                className="w-[250px] h-auto"
+                                className="w-[250px] max-h-[25vh]"
                             ></video>
                         </div>
                     </div>
