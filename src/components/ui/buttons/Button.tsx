@@ -49,11 +49,11 @@ const buttonStyles = cva(base, {
     variant: {
       ghost: "text-pink-100",
       default:
-        "bg-pink-100 text-purple-600 hover:border-none hover:bg-purple-600 hover:text-pink-100",
-      outline: "text-pink-100 border-1 border-pink-100",
+        "bg-pink-100 text-purple-600 hover:cursor-pointer hover:border-none hover:bg-purple-600 hover:text-pink-100",
+      outline: "text-pink-100 border-1 border-pink-100 hover:cursor-pointer",
     },
     size: {
-      large: "px-lg py-lg gap-lg text-accent-lg",
+      large: "px-xl py-lg gap-lg text-accent-lg",
       default: "px-xl py-lg gap-lg text-accent-md",
       small: "px-xl py-lg gap-md text-accent-xs",
     },
