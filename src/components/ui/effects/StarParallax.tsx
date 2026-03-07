@@ -49,8 +49,14 @@ export default function StarParallax() {
 
     let observer: IntersectionObserver | null = null;
 
-    // For quiz pages or fixed overlays, start immediately
-    if (isQuizPage || isFixedOverlay) {
+    // Check if this is the Quiz section (has data-quiz-section attribute or other markers)
+    const isQuizSection = targetElement.hasAttribute('data-quiz-section') ||
+                          targetElement.querySelector('button')?.textContent?.includes('Take the Quiz') || 
+                          targetElement.querySelector('[alt*="quiz" i]') !== null ||
+                          targetElement.textContent?.includes('persona quiz');
+
+    // For quiz pages, fixed overlays, or Quiz section, start immediately
+    if (isQuizPage || isFixedOverlay || isQuizSection) {
       setIsVisible(true);
     } else {
       // Check if already visible on mount (for hero section at top of page)

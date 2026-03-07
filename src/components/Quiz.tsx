@@ -12,7 +12,16 @@ export default function Quiz() {
   const router = useRouter();
   return (
     <>
+      <style dangerouslySetInnerHTML={{__html: `
+        [data-quiz-section="true"] .hero-stars-scroll-wrapper[data-layer="1"] {
+          transform: translateY(-300px) !important;
+        }
+        [data-quiz-section="true"] .hero-stars-scroll-wrapper[data-layer="3"] {
+          transform: translateY(-300px) !important;
+        }
+      `}} />
       <section className="relative bg-neutral-800 overflow-hidden md:hidden"
+        data-quiz-section="true"
         data-aos="fade-up"
         data-aos-offset="-100"
         data-aos-anchor-placement="top-center"
@@ -84,6 +93,7 @@ export default function Quiz() {
           DESKTOP (>= md)
          ======================= */}
       <section className="relative hidden overflow-hidden bg-neutral-800 md:block"
+        data-quiz-section="true"
         data-aos="fade-up"
         data-aos-offset="-100"
         data-aos-anchor-placement="top-center"
@@ -105,11 +115,9 @@ export default function Quiz() {
                 "radial-gradient(ellipse 72.73% 75.28% at 67.98% 65.87%, #F7F0FB 0%, #BE89E2 23.07%, #4119B8 46.77%, #16064A 77.15%, #171621 100%)",
             }}
           />
-
           <div className="pointer-events-none absolute inset-0 z-[1]">
-              <StarParallax />
+            <StarParallax />
           </div>
-
           <div className="absolute left-0 top-0 pointer-events-none">
             <Image
               src={PiperImg.src}

@@ -5,7 +5,16 @@ import Button from "./ui/buttons/Button";
 
 export default function Hero() {
   return (
-    <div id="hero" className="bg-neutral-800 px-lg pb-2xl">
+    <>
+      <style dangerouslySetInnerHTML={{__html: `
+        #hero .hero-stars-scroll-wrapper[data-layer="1"] {
+          transform: translateY(-120px) !important;
+        }
+        #hero .hero-stars-scroll-wrapper[data-layer="3"] {
+          transform: translateY(-120px) !important;
+        }
+      `}} />
+      <div id="hero" className="bg-neutral-800 px-lg pb-2xl">
       {/* DESKTOP HERO */}
       <div className="hidden md:block">
         {/* OUTER CONTENT CONTAINER (page gutters) */}
@@ -144,5 +153,6 @@ export default function Hero() {
         </section>
       </div>
     </div>
+    </>
   );
 }
