@@ -35,18 +35,19 @@ export default function Hero() {
             {/* INNER CONTENT CONTAINER (logo + text + meta) */}
             <div className="relative z-10 flex flex-col items-start pl-12">
               {/* Logo */}
-              <div className="w-[663px] h-[240px]">
+              <div>
                 <Image
                   src="/hack-the-galaxy-logo.svg"
                   alt="Hack the Galaxy logo"
                   width={663}
-                  height={240}
+                  height={200}
+                  className="relative h-[200px] left-[-24px] mt-[-48px]"
                   priority
                 />
               </div>
 
               {/* HERO TEXT GROUP (this is the new container) */}
-              <div className="flex flex-col gap-2 mt-8 mb-8 pl-12">
+              <div className="flex flex-col gap-1 mt-8 mb-8 pl-12">
                 {/* Tagline */}
                 <p className="text-heading-md">Where creativity takes orbit.</p>
 
@@ -57,7 +58,7 @@ export default function Hero() {
               </div>
 
               {/* Date + Location */}
-              <div className="flex flex-col gap-1 pl-12">
+              <div className="flex flex-col pl-12">
                 <p className="text-body-lg">March 14, 2026</p>
                 <p className="text-body-lg">SFU Burnaby Campus</p>
               </div>
@@ -80,7 +81,7 @@ export default function Hero() {
 
       {/* MOBILE HERO */}
       <div className="md:hidden">
-        <section className="relative w-full overflow-hidden rounded-3xl pt-[15vh] pb-10 text-white h-[97vh]">
+        <section className="relative w-full overflow-hidden rounded-3xl pt-[15vh] pb-10 text-white h-[97svh]">
           {/* Background glow */}
           <div
             className="absolute z-0 w-[935.67px] h-[935.67px]
