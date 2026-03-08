@@ -40,16 +40,21 @@ function TimeBlock({ value, label }: { value: string; label: string }) {
 
 export default function ApplyCountdown() {
   // Change this to your real deadline (local time)
-  const deadline = useMemo(() => new Date("2026-03-07T23:59:00"), []);
+  const originalDeadline = useMemo(() => new Date("2026-03-07T23:59:00"), []);
+  const extendedDeadline = useMemo(() => new Date("2026-03-10T23:59:00"), []);
 
-  const [left, setLeft] = useState<TimeLeft>(() => calcTimeLeft(deadline));
+  const now = Date.now();
+  const isExtended = now > originalDeadline.getTime();
+  const activeDeadline = isExtended ? extendedDeadline : originalDeadline;
+
+  const [left, setLeft] = useState<TimeLeft>(() => calcTimeLeft(activeDeadline));
 
   useEffect(() => {
     const id = window.setInterval(() => {
-      setLeft(calcTimeLeft(deadline));
+      setLeft(calcTimeLeft(activeDeadline));
     }, 1000);
     return () => window.clearInterval(id);
-  }, [deadline]);
+  }, [activeDeadline]);
 
   const isClosed = left.totalMs === 0;
 
@@ -61,20 +66,26 @@ export default function ApplyCountdown() {
         </div>
 
         <p className="text-center text-body-lg text-neutral-100">
-          {isClosed ? (
-            <>
-              Applications are now <strong>closed </strong> for Hack the Galaxy
-              2026.
-            </>
-          ) : (
-            <>
-              <span className="block md:inline">
-                Applications are open, <strong>apply now!</strong>
-              </span>
-              <span className="block md:inline"> Applications close in:</span>
-            </>
-          )}
-        </p>
+        {isClosed ? (
+          <>
+            Applications are now <strong>closed</strong> for Hack the Galaxy 2026.
+          </>
+        ) : isExtended ? (
+          <>
+            <span className="block md:inline">
+              Applications <strong>extended</strong> !
+            </span>
+            <span className="block md:inline"> Final deadline in:</span>
+          </>
+        ) : (
+          <>
+            <span className="block md:inline">
+              Applications are open, <strong>apply now!</strong>
+            </span>
+            <span className="block md:inline"> Applications close in:</span>
+          </>
+        )}
+      </p>
 
         <div className="flex justify-center items-start gap-4">
           <TimeBlock value={pad2(left.days)} label="DAYS" />
