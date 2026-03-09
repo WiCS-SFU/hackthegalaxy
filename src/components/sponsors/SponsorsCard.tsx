@@ -20,13 +20,13 @@ const tierConfig: Record<Tier, { containerClass: string; imageWidth: number; ima
   },
   silver: {
     containerClass: "bg-[#AE6BDB] p-xl h-[150px]",
-    imageWidth: 175,
+    imageWidth: 140,
     imageHeight: 152,
   },
   bronze: {
     containerClass: "bg-neutral-700 p-lg h-[150px]",
     imageWidth: 120,
-    imageHeight: 56.2,
+    imageHeight: 150,
   },
 };
 
