@@ -18,7 +18,7 @@ export default function FAQItem({
       <button
         onClick={onToggle}
         aria-expanded={isOpen}
-        className="flex w-full items-center justify-between text-left gap-md"
+        className="flex w-full items-center justify-between text-left gap-md hover:cursor-pointer"
       >
         <span className="text-body-lg text-neutral-100 font-bold">
           {question}

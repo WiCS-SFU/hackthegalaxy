@@ -14,7 +14,7 @@ export default function OurTeam() {
     <section
       className="flex flex-col gap-xl mx-auto w-full max-w-[1280px] mt-xl mb-3xl px-2xl"
       data-aos="fade-up"
-      data-aos-offset="50"
+      data-aos-offset="-100"
       data-aos-anchor-placement="top-center"
       data-aos-once="true"
       data-aos-duration="600"

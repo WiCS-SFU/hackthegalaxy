@@ -11,7 +11,7 @@ export default function FAQ() {
     // main section for FAQ
     <section id="faq" className="w-full bg-neutral-800"
       data-aos="fade-up"
-      data-aos-offset="50"
+      data-aos-offset="-100"
       data-aos-anchor-placement="top-center"
       data-aos-once="true"
       data-aos-duration="600"
