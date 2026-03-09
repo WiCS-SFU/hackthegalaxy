@@ -29,27 +29,21 @@ export default function Sponsors() {
             {/* GOLD */}
             <SponsorCard 
               tier="gold" 
-              imageSrc="/sponsors/transoftSolutionsLogo.png" 
-              altText="Transoft Solutions" 
-              href="https://www.transoftsolutions.com/"
-            />
-            <SponsorCard 
-              tier="gold" 
               imageSrc="/sponsors/Excelar_White_Logo.svg" 
               altText="Excelar" 
               href="https://www.excelar.ca/"
             />
+            <SponsorCard 
+              tier="gold" 
+              imageSrc="/sponsors/Transoft Solutions Logo White.png" 
+              altText="Transoft Solutions" 
+              href="https://www.transoftsolutions.com/"
+            />
             {/* SILVER */}
-            <div className="grid grid-cols-2 gap-3">
+            <div>
               <SponsorCard
                 tier="silver"
-                imageSrc="/sponsors/DeloitteLogo.svg"
-                altText="Deloitte"
-                href="https://www.deloitte.com/ca/en.html"
-              />
-              <SponsorCard
-                tier="silver"
-                imageSrc="/sponsors/SAP Logo.jpg"
+                imageSrc="/sponsors/SAP Logo.svg"
                 altText="SAP"
                 href="https://www.sap.com/canada/index.html"
               />
@@ -73,6 +67,12 @@ export default function Sponsors() {
                 imageSrc="/sponsors/SPB.png"
                 altText="Steve's Poke Bar"
                 href="https://www.stevespokebar.ca/"
+              />
+              <SponsorCard
+                tier="bronze"
+                imageSrc="/sponsors/The_Old_Spaghetti_Factory_Logo.svg"
+                altText="Old Spaghetti Factory"
+                href="https://oldspaghettifactory.ca/"
               />
             </div>
           </div>
