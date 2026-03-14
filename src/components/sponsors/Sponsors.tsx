@@ -48,6 +48,14 @@ export default function Sponsors() {
                 href="https://www.sap.com/canada/index.html"
               />
             </div>
+            <div>
+              <SponsorCard
+                tier="silver"
+                imageSrc="/sponsors/DeloitteLogo.svg"
+                altText="Deloitte"
+                href="https://www.deloitte.com/ca/en.html"
+              />
+            </div>
 
             {/* BRONZE */}
             <div className="grid grid-cols-3 gap-4">
